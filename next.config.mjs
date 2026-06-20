@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  compress: true,
+  compress: true, 
 };
 
 export default nextConfig;
