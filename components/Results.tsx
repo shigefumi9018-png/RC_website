@@ -55,20 +55,20 @@ export function Results() {
             <svg viewBox={`0 0 ${VBW} ${VBH}`} role="img" aria-label={`${r.title} ${r.note}`} preserveAspectRatio="xMidYMid meet">
               <defs>
                 <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#e34234" stopOpacity="0.28" />
-                  <stop offset="100%" stopColor="#e34234" stopOpacity="0" />
+                  <stop offset="0%" stopColor="#1a56db" stopOpacity="0.28" />
+                  <stop offset="100%" stopColor="#1a56db" stopOpacity="0" />
                 </linearGradient>
               </defs>
 
               {/* preparation zone */}
-              <rect x={prepX0} y={PT} width={prepX1 - prepX0} height={PH} fill="#0d1b2a" opacity="0.05" />
+              <rect x={prepX0} y={PT} width={prepX1 - prepX0} height={PH} fill="#0f1b2e" opacity="0.05" />
               <text x={(prepX0 + prepX1) / 2} y={PT + 14} textAnchor="middle" className="chart-zone">{r.prep}</text>
               <text x={(prepX1 + xAt(N - 1)) / 2} y={PT + 14} textAnchor="middle" className="chart-zone chart-zone--accent">{r.ramp}</text>
 
               {/* gridlines + y labels */}
               {GRID.map((v) => (
                 <g key={v}>
-                  <line x1={PL} y1={yAt(v)} x2={VBW - PR} y2={yAt(v)} stroke="#d8d1c2" strokeWidth="1" strokeDasharray={v === 0 ? "0" : "3 4"} />
+                  <line x1={PL} y1={yAt(v)} x2={VBW - PR} y2={yAt(v)} stroke="#e3e8ef" strokeWidth="1" strokeDasharray={v === 0 ? "0" : "3 4"} />
                   <text x={PL - 10} y={yAt(v) + 4} textAnchor="end" className="chart-axis">{money(v)}</text>
                 </g>
               ))}
@@ -81,11 +81,11 @@ export function Results() {
 
               {/* area + line */}
               <path d={areaPath} fill="url(#areaFill)" />
-              <path d={linePath} fill="none" stroke="#e34234" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path d={linePath} fill="none" stroke="#1a56db" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
 
               {/* dots */}
               {DATA.map((v, i) => (
-                <circle key={i} cx={xAt(i)} cy={yAt(v)} r={i === 2 || i === N - 1 ? 5.5 : 3} fill={i === 2 || i === N - 1 ? "#e34234" : "#fff"} stroke="#e34234" strokeWidth="2" />
+                <circle key={i} cx={xAt(i)} cy={yAt(v)} r={i === 2 || i === N - 1 ? 5.5 : 3} fill={i === 2 || i === N - 1 ? "#1a56db" : "#fff"} stroke="#1a56db" strokeWidth="2" />
               ))}
 
               {/* emphasised value labels */}

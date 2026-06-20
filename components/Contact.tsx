@@ -60,8 +60,8 @@ export function Contact() {
             {status === "success" ? (
               <div className="form-success" role="status">
                 <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
-                  <circle cx="22" cy="22" r="21" fill="none" stroke="#e34234" strokeWidth="2" />
-                  <path d="M14 22.5l5.5 5.5L31 16" fill="none" stroke="#e34234" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+                  <circle cx="22" cy="22" r="21" fill="none" stroke="#1a56db" strokeWidth="2" />
+                  <path d="M14 22.5l5.5 5.5L31 16" fill="none" stroke="#1a56db" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <h4>{c.successTitle}</h4>
                 <p>{c.successBody}</p>

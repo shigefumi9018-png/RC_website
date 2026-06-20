@@ -9,8 +9,8 @@ type LogoProps = {
  * disciplines the name stands for: Architecture, Analytics, Automation.
  */
 export function Logo({ size = 34, variant = "dark" }: LogoProps) {
-  const bg = variant === "dark" ? "#0d1b2a" : "#f4f1ea";
-  const aColor = variant === "dark" ? "#f4f1ea" : "#0d1b2a";
+  const bg = variant === "dark" ? "#0f1b2e" : "#ffffff";
+  const aColor = variant === "dark" ? "#ffffff" : "#0f1b2e";
   return (
     <svg
       className="brand-mark"
@@ -32,10 +32,10 @@ export function Logo({ size = 34, variant = "dark" }: LogoProps) {
         letterSpacing="-0.5"
       >
         <tspan fill={aColor}>A</tspan>
-        <tspan fill="#e34234">3</tspan>
+        <tspan fill="#1a56db">3</tspan>
       </text>
       {/* three ascending bars: Architecture · Analytics · Automation */}
-      <g fill="#e34234">
+      <g fill="#1a56db">
         <rect x="10" y="23" width="2.6" height="3.5" rx="1" />
         <rect x="14.7" y="21" width="2.6" height="5.5" rx="1" />
         <rect x="19.4" y="18.5" width="2.6" height="8" rx="1" />

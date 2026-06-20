@@ -23,7 +23,7 @@ export function Calendly() {
 
   const url =
     `${siteConfig.calendly}?hide_gdpr_banner=1` +
-    "&background_color=ffffff&text_color=0d1b2a&primary_color=e34234";
+    "&background_color=ffffff&text_color=0f1b2e&primary_color=1a56db";
 
   return (
     <div

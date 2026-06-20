@@ -15,7 +15,7 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#f4f1ea",
+          background: "#ffffff",
           padding: "72px",
           fontFamily: "Georgia, serif",
         }}
@@ -34,7 +34,7 @@ export default function OpengraphImage() {
                 width: 64,
                 height: 64,
                 borderRadius: 16,
-                background: "#0d1b2a",
+                background: "#0f1b2e",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -42,14 +42,14 @@ export default function OpengraphImage() {
                 fontWeight: 700,
               }}
             >
-              <span style={{ color: "#f4f1ea" }}>A</span>
-              <span style={{ color: "#e34234" }}>3</span>
+              <span style={{ color: "#ffffff" }}>A</span>
+              <span style={{ color: "#1a56db" }}>3</span>
             </div>
-            <div style={{ fontSize: 34, fontWeight: 700, color: "#0d1b2a" }}>
+            <div style={{ fontSize: 34, fontWeight: 700, color: "#0f1b2e" }}>
               A3 Tech Group
             </div>
           </div>
-          <div style={{ fontSize: 24, color: "#5f6b78", letterSpacing: 4 }}>
+          <div style={{ fontSize: 24, color: "#6b7888", letterSpacing: 4 }}>
             TOKYO, JAPAN
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function OpengraphImage() {
               flexDirection: "column",
               fontSize: 70,
               fontWeight: 700,
-              color: "#0d1b2a",
+              color: "#0f1b2e",
               lineHeight: 1.08,
               maxWidth: 900,
             }}
@@ -70,7 +70,7 @@ export default function OpengraphImage() {
             <span>Software Engineering &amp; AI,</span>
             <span>built in Japan.</span>
           </div>
-          <div style={{ fontSize: 30, color: "#2a3b4d", maxWidth: 820 }}>
+          <div style={{ fontSize: 30, color: "#3a4a5f", maxWidth: 820 }}>
             Full-stack development · Applied AI · AI training for teams
           </div>
         </div>
@@ -82,10 +82,10 @@ export default function OpengraphImage() {
             alignItems: "center",
             gap: 16,
             fontSize: 24,
-            color: "#5f6b78",
+            color: "#6b7888",
           }}
         >
-          <div style={{ width: 60, height: 6, background: "#e34234" }} />
+          <div style={{ width: 60, height: 6, background: "#1a56db" }} />
           a3techgroup.com
         </div>
       </div>

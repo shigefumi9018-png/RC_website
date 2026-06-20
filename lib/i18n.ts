@@ -16,7 +16,15 @@ export const localeNames: Record<Locale, string> = {
 };
 
 type Dict = {
-  nav: { skills: string; why: string; approach: string; collaboration: string; team: string; faq: string; contact: string };
+  nav: { skills: string; why: string; approach: string; collaboration: string; team: string; faq: string; contact: string; company: string; news: string };
+  news: {
+    kicker: string; title: string; more: string;
+    items: { date: string; cat: string; title: string }[];
+  };
+  company: {
+    kicker: string; title: string;
+    rows: { label: string; value: string }[];
+  };
   hero: {
     eyebrow: string;
     l1: string; l2: string; l3a: string; em: string; l3b: string;
@@ -87,7 +95,27 @@ type Dict = {
 };
 
 const en: Dict = {
-  nav: { skills: "Skills", why: "Why us", approach: "Approach", collaboration: "Partnership", team: "Founders", faq: "FAQ", contact: "Contact us" },
+  nav: { skills: "Services", why: "Why us", approach: "Approach", collaboration: "Partnership", team: "Founders", faq: "FAQ", contact: "Contact us", company: "Company", news: "News" },
+  news: {
+    kicker: "News", title: "Latest updates", more: "View all news",
+    items: [
+      { date: "2026.06.20", cat: "Notice", title: "A3 Tech Group corporate website renewed." },
+      { date: "2026.05.15", cat: "Project", title: "Aligner AI project is now underway." },
+      { date: "2026.04.02", cat: "Service", title: "AI automation partnership program launched." },
+      { date: "2026.02.10", cat: "Notice", title: "Now accepting partnership inquiries from the US and Canada." },
+    ],
+  },
+  company: {
+    kicker: "Company", title: "Company profile",
+    rows: [
+      { label: "Company name", value: "A3 Tech Group" },
+      { label: "Established", value: "2024" },
+      { label: "Location", value: "Tokyo, Japan" },
+      { label: "Representatives", value: "Daniel (Hiro Tanaka), Shigefumi Kobayashi" },
+      { label: "Business", value: "Full-stack development, AI automation, CMS & CRM solutions, AI training" },
+      { label: "Languages", value: "English / 日本語 / 中文" },
+    ],
+  },
   hero: {
     eyebrow: "Tokyo, Japan",
     l1: "We build software", l2: "and the teams", l3a: "that ", em: "ship", l3b: " it.",
@@ -342,7 +370,27 @@ const en: Dict = {
 };
 
 const ja: Dict = {
-  nav: { skills: "スキル", why: "選ばれる理由", approach: "私たちの流儀", collaboration: "パートナーシップ", team: "創業者", faq: "よくある質問", contact: "お問い合わせ" },
+  nav: { skills: "事業内容", why: "選ばれる理由", approach: "私たちの流儀", collaboration: "パートナーシップ", team: "創業者", faq: "よくある質問", contact: "お問い合わせ", company: "会社概要", news: "お知らせ" },
+  news: {
+    kicker: "News", title: "お知らせ", more: "お知らせ一覧",
+    items: [
+      { date: "2026.06.20", cat: "お知らせ", title: "コーポレートサイトをリニューアルしました。" },
+      { date: "2026.05.15", cat: "プロジェクト", title: "Aligner AI プロジェクトを開始しました。" },
+      { date: "2026.04.02", cat: "サービス", title: "AI自動化パートナーシップ・プログラムを開始しました。" },
+      { date: "2026.02.10", cat: "お知らせ", title: "米国・カナダからのパートナーシップのお問い合わせを受付開始しました。" },
+    ],
+  },
+  company: {
+    kicker: "Company", title: "会社概要",
+    rows: [
+      { label: "会社名", value: "A3 Tech Group" },
+      { label: "設立", value: "2024年" },
+      { label: "所在地", value: "日本・東京" },
+      { label: "代表者", value: "Daniel (Hiro Tanaka)、Shigefumi Kobayashi" },
+      { label: "事業内容", value: "フルスタック開発、AI自動化、CMS・CRM、AI研修" },
+      { label: "対応言語", value: "English / 日本語 / 中文" },
+    ],
+  },
   hero: {
     eyebrow: "東京, 日本",
     l1: "ソフトウェアと、", l2: "それを動かす", l3a: "", em: "チーム", l3b: "をつくる。",
@@ -597,7 +645,27 @@ const ja: Dict = {
 };
 
 const zh: Dict = {
-  nav: { skills: "技能", why: "为何选择", approach: "我们的方式", collaboration: "合作伙伴", team: "创始人", faq: "常见问题", contact: "联系我们" },
+  nav: { skills: "业务", why: "为何选择", approach: "我们的方式", collaboration: "合作伙伴", team: "创始人", faq: "常见问题", contact: "联系我们", company: "公司概要", news: "新闻" },
+  news: {
+    kicker: "News", title: "最新动态", more: "查看全部",
+    items: [
+      { date: "2026.06.20", cat: "公告", title: "企业官网全新改版上线。" },
+      { date: "2026.05.15", cat: "项目", title: "Aligner AI 项目正式启动。" },
+      { date: "2026.04.02", cat: "服务", title: "AI 自动化合作伙伴计划上线。" },
+      { date: "2026.02.10", cat: "公告", title: "开始受理来自美国与加拿大的合作咨询。" },
+    ],
+  },
+  company: {
+    kicker: "Company", title: "公司概要",
+    rows: [
+      { label: "公司名称", value: "A3 Tech Group" },
+      { label: "成立", value: "2024年" },
+      { label: "所在地", value: "日本·东京" },
+      { label: "代表人", value: "Daniel (Hiro Tanaka)、Shigefumi Kobayashi" },
+      { label: "业务内容", value: "全栈开发、AI 自动化、CMS·CRM、AI 培训" },
+      { label: "语言", value: "English / 日本語 / 中文" },
+    ],
+  },
   hero: {
     eyebrow: "日本 · 东京",
     l1: "我们打造软件，", l2: "也打造", l3a: "", em: "团队", l3b: "去交付它。",

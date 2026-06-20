@@ -43,13 +43,13 @@ function escapeHtml(s: string) {
 /** Shared email shell so both messages look on-brand. */
 function shell(title: string, inner: string) {
   return `
-  <div style="background:#f4f1ea;padding:32px 0;font-family:Arial,Helvetica,sans-serif">
-    <div style="max-width:560px;margin:0 auto;color:#0d1b2a">
-      <div style="background:#0d1b2a;color:#f4f1ea;padding:22px 26px;border-radius:12px 12px 0 0">
-        <div style="font-size:13px;letter-spacing:3px;color:#e34234;text-transform:uppercase">A3 Tech Group</div>
+  <div style="background:#f3f6fb;padding:32px 0;font-family:Arial,Helvetica,sans-serif">
+    <div style="max-width:560px;margin:0 auto;color:#0f1b2e">
+      <div style="background:#0f1b2e;color:#f3f6fb;padding:22px 26px;border-radius:12px 12px 0 0">
+        <div style="font-size:13px;letter-spacing:3px;color:#1a56db;text-transform:uppercase">A3 Tech Group</div>
         <h2 style="margin:6px 0 0;font-size:19px">${title}</h2>
       </div>
-      <div style="background:#ffffff;border:1px solid #d8d1c2;border-top:0;border-radius:0 0 12px 12px;padding:26px">
+      <div style="background:#ffffff;border:1px solid #e3e8ef;border-top:0;border-radius:0 0 12px 12px;padding:26px">
         ${inner}
       </div>
       <p style="text-align:center;color:#9aa7b4;font-size:12px;margin-top:18px">
@@ -117,11 +117,11 @@ export async function POST(request: Request) {
   const teamInner = `
     <table style="width:100%;border-collapse:collapse;font-size:14px">
       <tr><td style="padding:6px 0;color:#5f6b78;width:120px">Name</td><td style="padding:6px 0;font-weight:bold">${escapeHtml(name)}</td></tr>
-      <tr><td style="padding:6px 0;color:#5f6b78">Email</td><td style="padding:6px 0"><a href="mailto:${escapeHtml(email)}" style="color:#e34234">${escapeHtml(email)}</a></td></tr>
+      <tr><td style="padding:6px 0;color:#5f6b78">Email</td><td style="padding:6px 0"><a href="mailto:${escapeHtml(email)}" style="color:#1a56db">${escapeHtml(email)}</a></td></tr>
       <tr><td style="padding:6px 0;color:#5f6b78">Company</td><td style="padding:6px 0">${escapeHtml(company)}</td></tr>
       <tr><td style="padding:6px 0;color:#5f6b78">Topic</td><td style="padding:6px 0">${escapeHtml(service)}</td></tr>
     </table>
-    <div style="margin-top:16px;padding-top:16px;border-top:1px solid #d8d1c2">
+    <div style="margin-top:16px;padding-top:16px;border-top:1px solid #e3e8ef">
       <div style="color:#5f6b78;font-size:13px;margin-bottom:8px">Message</div>
       <div style="white-space:pre-wrap;line-height:1.6">${escapeHtml(message)}</div>
     </div>
@@ -139,7 +139,7 @@ export async function POST(request: Request) {
       Thank you for reaching out to <strong>A3 Tech Group</strong>. We've received your
       message and a member of our team will get back to you within one business day.
     </p>
-    <div style="background:#f4f1ea;border:1px solid #d8d1c2;border-radius:10px;padding:14px 16px;margin:18px 0">
+    <div style="background:#f3f6fb;border:1px solid #e3e8ef;border-radius:10px;padding:14px 16px;margin:18px 0">
       <div style="color:#5f6b78;font-size:12px;margin-bottom:6px">Your message</div>
       <div style="white-space:pre-wrap;line-height:1.6;font-size:14px">${escapeHtml(message)}</div>
     </div>
@@ -147,7 +147,7 @@ export async function POST(request: Request) {
       Prefer to talk sooner? You can book a 30-minute call here:
     </p>
     <p style="margin:0 0 18px">
-      <a href="${siteConfig.calendly}" style="display:inline-block;background:#e34234;color:#fff;text-decoration:none;padding:10px 18px;border-radius:999px;font-size:14px">Book a call →</a>
+      <a href="${siteConfig.calendly}" style="display:inline-block;background:#1a56db;color:#fff;text-decoration:none;padding:10px 18px;border-radius:999px;font-size:14px">Book a call →</a>
     </p>
     <p style="font-size:14px;color:#5f6b78;line-height:1.7;margin:0">The A3 Tech Group team<br/>Tokyo, Japan</p>`;
 

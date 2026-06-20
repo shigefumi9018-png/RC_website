@@ -30,6 +30,7 @@ export function Header() {
     { href: "#skills", label: t.nav.skills },
     { href: "#why", label: t.nav.why },
     { href: "#collaboration", label: t.nav.collaboration },
+    { href: "#company", label: t.nav.company },
     { href: "#faq", label: t.nav.faq },
   ];
 

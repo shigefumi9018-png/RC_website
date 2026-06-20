@@ -1,26 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Shippori_Mincho } from "next/font/google";
+import { Inter } from "next/font/google";
 import { siteConfig } from "@/lib/site";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import "./globals.css";
 
+// Inter for Latin; Noto Sans JP (loaded via <link> below) covers JP/CJK glyphs,
+// giving the gothic, modern Japanese corporate look.
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
   display: "swap",
 });
 
-const mincho = Shippori_Mincho({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-serif",
-  display: "swap",
-});
-
 export const viewport: Viewport = {
-  themeColor: "#0d1b2a",
+  themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1,
   colorScheme: "light",
@@ -97,7 +92,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${mincho.variable}`}>
+    <html lang="en" className={inter.variable}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>
         <a href="#main" className="skip-link">Skip to content</a>
         <LanguageProvider>
