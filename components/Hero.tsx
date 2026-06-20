@@ -36,7 +36,7 @@ export function Hero() {
                 />
               </svg>
             </a>
-            <a className="btn btn-ghost" href="#services">
+            <a className="btn btn-ghost" href="#skills">
               {t.hero.secondary}
             </a>
           </div>

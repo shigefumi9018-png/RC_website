@@ -31,13 +31,16 @@ export function JsonLd() {
           addressRegion: siteConfig.location.region,
           addressCountry: siteConfig.location.country,
         },
-        employee: [
-          {
-            "@type": "Person",
-            name: siteConfig.cto.name,
-            jobTitle: siteConfig.cto.role,
-          },
-        ],
+        founder: siteConfig.founders.map((p) => ({
+          "@type": "Person",
+          name: p.name,
+          jobTitle: p.role,
+        })),
+        employee: siteConfig.founders.map((p) => ({
+          "@type": "Person",
+          name: p.name,
+          jobTitle: p.role,
+        })),
       },
       {
         "@type": "ProfessionalService",

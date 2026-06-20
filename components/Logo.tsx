@@ -4,32 +4,35 @@ type LogoProps = {
   variant?: "dark" | "light";
 };
 
+/**
+ * A3 monogram: a rounded badge reading "A3", the 3 in vermillion.
+ */
 export function Logo({ size = 34, variant = "dark" }: LogoProps) {
   const bg = variant === "dark" ? "#0d1b2a" : "#f4f1ea";
-  const cross = variant === "dark" ? "#f4f1ea" : "#0d1b2a";
+  const aColor = variant === "dark" ? "#f4f1ea" : "#0d1b2a";
   return (
     <svg
       className="brand-mark"
       width={size}
       height={size}
       viewBox="0 0 32 32"
-      aria-hidden="true"
+      role="img"
+      aria-label="A3"
     >
       <rect width="32" height="32" rx="7" fill={bg} />
-      <path
-        d="M9 22.5 16 9l7 13.5"
-        fill="none"
-        stroke="#e34234"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M12.4 17.5h7.2"
-        stroke={cross}
-        strokeWidth="2.2"
-        strokeLinecap="round"
-      />
+      <text
+        x="16"
+        y="16"
+        textAnchor="middle"
+        dominantBaseline="central"
+        fontFamily="Georgia, 'Times New Roman', serif"
+        fontWeight="700"
+        fontSize="16.5"
+        letterSpacing="-0.5"
+      >
+        <tspan fill={aColor}>A</tspan>
+        <tspan fill="#e34234">3</tspan>
+      </text>
     </svg>
   );
 }

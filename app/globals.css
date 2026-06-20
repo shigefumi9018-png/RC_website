@@ -119,10 +119,12 @@ em { font-style: italic; color: var(--accent); }
 .nav a:not(.nav-cta):hover { color: var(--ink); }
 .nav a:not(.nav-cta):hover::after { width: 100%; }
 .nav-cta {
-  background: var(--ink); color: var(--paper); padding: .55rem 1.1rem; border-radius: 999px;
-  font-weight: 500; transition: background .25s, transform .25s;
+  background: var(--accent); color: #fff; padding: .62rem 1.3rem; border-radius: 999px;
+  font-weight: 600; letter-spacing: .01em;
+  box-shadow: 0 8px 20px -10px var(--accent);
+  transition: background .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
 }
-.nav-cta:hover { background: var(--accent); transform: translateY(-1px); }
+.nav-cta:hover { background: var(--accent-dk); color: #fff; transform: translateY(-2px); box-shadow: 0 14px 28px -12px var(--accent); }
 
 .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; }
 .nav-toggle span { width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: .3s var(--ease); }
@@ -365,6 +367,94 @@ em { font-style: italic; color: var(--accent); }
 .reveal.in { opacity: 1; transform: none; }
 
 /* =====================================================================
+   Slider / carousel
+   ===================================================================== */
+.slider { position: relative; }
+.slider-viewport { overflow: hidden; border-radius: var(--radius); }
+.slider-track { display: flex; transition: transform .6s var(--ease); will-change: transform; }
+.slider-slide { min-width: 100%; flex: 0 0 100%; }
+.slider-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
+  width: 44px; height: 44px; border-radius: 50%; background: var(--white);
+  border: 1px solid var(--line); color: var(--ink); display: grid; place-items: center;
+  cursor: pointer; box-shadow: 0 10px 24px -12px rgba(13,27,42,.5);
+  transition: background .2s, color .2s, border-color .2s, transform .2s;
+}
+.slider-arrow:hover { background: var(--accent); color: #fff; border-color: transparent; }
+.slider-arrow:active { transform: translateY(-50%) scale(.94); }
+.slider-arrow--prev { left: 14px; }
+.slider-arrow--next { right: 14px; }
+.slider-dots { display: flex; gap: .5rem; justify-content: center; margin-top: 1.5rem; }
+.slider-dot { width: 9px; height: 9px; border-radius: 999px; border: 0; background: var(--line); cursor: pointer; padding: 0; transition: background .25s, width .25s var(--ease); }
+.slider-dot:hover { background: var(--muted); }
+.slider-dot.active { background: var(--accent); width: 28px; }
+
+/* ---------- Skills slides ---------- */
+.skill-slide { display: grid; grid-template-columns: 1.05fr .95fr; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.skill-media { position: relative; min-height: 360px; background: linear-gradient(155deg, var(--ink), var(--ink-soft)); }
+.skill-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.skill-badge { position: absolute; top: 1rem; left: 1rem; z-index: 1; background: var(--ink); color: var(--paper); font-family: var(--serif); font-weight: 700; font-size: .8rem; letter-spacing: .08em; padding: .3rem .65rem; border-radius: 8px; }
+.skill-body { padding: clamp(1.6rem, 3.5vw, 2.8rem); display: flex; flex-direction: column; justify-content: center; }
+.skill-body h3 { font-size: clamp(1.4rem, 2.5vw, 1.7rem); margin-bottom: .9rem; }
+.skill-body p { color: var(--ink-soft); margin-bottom: 1.3rem; }
+
+/* =====================================================================
+   Experience / track record
+   ===================================================================== */
+.exp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2.5vw, 1.6rem); }
+.exp-card {
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 2rem 1.6rem; text-align: center;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s;
+}
+.exp-card:hover { transform: translateY(-4px); box-shadow: 0 26px 46px -30px rgba(13,27,42,.3); border-color: transparent; }
+.exp-name { font-family: var(--serif); font-weight: 700; font-size: 1.5rem; color: var(--ink); margin-bottom: .4rem; }
+.exp-note { color: var(--muted); font-size: .95rem; }
+.exp-handle { text-align: center; max-width: 62ch; margin: 2.4rem auto 0; color: var(--ink-soft); font-size: 1.1rem; }
+
+/* =====================================================================
+   Collaboration / partnership
+   ===================================================================== */
+.collab-lead { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--ink); max-width: 60ch; margin-inline: auto; }
+.collab-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(2rem, 4vw, 3.5rem); align-items: center; }
+.collab-slide { margin: 0; position: relative; }
+.collab-slide img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); display: block; background: var(--paper); }
+.collab-slide figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+  padding: 2.2rem 1.4rem 1.1rem; color: #fff; font-family: var(--serif); font-size: 1.08rem; font-weight: 600;
+  background: linear-gradient(to top, rgba(13,27,42,.8), transparent);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+.collab-copy p { color: var(--ink-soft); margin-bottom: 1.05rem; }
+.collab-notech { background: var(--white); border-left: 3px solid var(--accent); padding: 1.05rem 1.25rem; border-radius: 10px; color: var(--ink) !important; font-weight: 500; }
+.collab-closing { font-family: var(--serif); font-style: italic; font-size: 1.25rem; color: var(--ink) !important; margin: 1.5rem 0 1.6rem !important; }
+
+/* =====================================================================
+   Founders
+   ===================================================================== */
+.founders-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(1.2rem, 2.5vw, 2rem); }
+.founder-card {
+  display: flex; gap: 1.4rem; background: var(--white); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: clamp(1.6rem, 2.5vw, 2.1rem);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+.founder-card:hover { transform: translateY(-4px); box-shadow: 0 30px 52px -30px rgba(13,27,42,.28); }
+.founder-portrait {
+  flex: none; width: 84px; height: 84px; border-radius: 16px; position: relative; overflow: hidden;
+  background: linear-gradient(155deg, var(--ink), var(--ink-soft)); display: grid; place-items: center;
+  box-shadow: 0 14px 30px -16px rgba(13,27,42,.6);
+}
+.founder-portrait::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 70% 18%, color-mix(in srgb, var(--accent) 36%, transparent), transparent 60%); }
+.founder-initials { position: relative; z-index: 1; font-family: var(--serif); font-weight: 700; font-size: 1.85rem; color: var(--paper); }
+.founder-body h3 { font-size: 1.3rem; }
+.founder-role { color: var(--accent); font-weight: 500; margin: .25rem 0 .85rem; }
+.founder-bio { color: var(--ink-soft); font-size: .98rem; margin-bottom: 1.05rem; }
+.founder-exp { list-style: none; padding: 0; display: grid; gap: .5rem; }
+.founder-exp li { position: relative; padding-left: 1.4rem; font-size: .92rem; color: var(--ink-soft); }
+.founder-exp li::before { content: ""; position: absolute; left: 0; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.founders-cta { text-align: center; margin-top: clamp(2rem, 4vw, 3rem); }
+
+/* =====================================================================
    Responsive
    ===================================================================== */
 @media (max-width: 920px) {
@@ -374,6 +464,10 @@ em { font-style: italic; color: var(--accent); }
   .approach-grid .section-head { position: static; }
   .stack-grid { grid-template-columns: repeat(2, 1fr); }
   .team-portrait { max-width: 320px; }
+  .skill-slide { grid-template-columns: 1fr; }
+  .skill-media { min-height: 240px; }
+  .collab-grid { grid-template-columns: 1fr; }
+  .founders-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 900px) {
   .contact-layout { grid-template-columns: 1fr; }
@@ -386,6 +480,9 @@ em { font-style: italic; color: var(--accent); }
   .footer-inner { grid-template-columns: 1fr; gap: 1.8rem; }
   .hero-stats { gap: 1.5rem 2rem; }
   .field-row { grid-template-columns: 1fr; }
+  .exp-grid { grid-template-columns: 1fr; }
+  .founder-card { flex-direction: column; }
+  .slider-arrow { width: 38px; height: 38px; }
 }
 @media (max-width: 420px) {
   body { font-size: 16px; }

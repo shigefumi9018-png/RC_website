@@ -27,9 +27,9 @@ export function Header() {
   }, [open]);
 
   const links = [
-    { href: "#services", label: t.nav.services },
+    { href: "#skills", label: t.nav.skills },
     { href: "#approach", label: t.nav.approach },
-    { href: "#stack", label: t.nav.stack },
+    { href: "#collaboration", label: t.nav.collaboration },
     { href: "#team", label: t.nav.team },
   ];
 

@@ -8,9 +8,9 @@ export function Footer() {
   const t = useT();
   const year = new Date().getFullYear();
   const links = [
-    { href: "#services", label: t.nav.services },
+    { href: "#skills", label: t.nav.skills },
     { href: "#approach", label: t.nav.approach },
-    { href: "#stack", label: t.nav.stack },
+    { href: "#collaboration", label: t.nav.collaboration },
     { href: "#team", label: t.nav.team },
     { href: "#contact", label: t.nav.contact },
   ];

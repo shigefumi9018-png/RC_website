@@ -38,12 +38,12 @@ export default function OpengraphImage() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#e34234",
-                fontSize: 40,
+                fontSize: 34,
                 fontWeight: 700,
               }}
             >
-              A
+              <span style={{ color: "#f4f1ea" }}>A</span>
+              <span style={{ color: "#e34234" }}>3</span>
             </div>
             <div style={{ fontSize: 34, fontWeight: 700, color: "#0d1b2a" }}>
               A3 Tech Group
