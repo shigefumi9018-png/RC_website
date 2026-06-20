@@ -587,6 +587,23 @@ em { font-style: normal; color: var(--accent); }
 .collab-meeting { color: var(--ink-soft); font-style: italic; }
 
 /* =====================================================================
+   Back-to-top button (ページトップへ)
+   ===================================================================== */
+.scroll-top {
+  position: fixed; right: clamp(1rem, 3vw, 2rem); bottom: clamp(1rem, 3vw, 2rem); z-index: 60;
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
+  width: 52px; height: 52px; border: 0; border-radius: 10px; cursor: pointer;
+  background: var(--accent); color: #fff;
+  box-shadow: 0 14px 30px -10px var(--accent);
+  opacity: 0; visibility: hidden; transform: translateY(12px);
+  transition: opacity .3s var(--ease), transform .3s var(--ease), visibility .3s, background .25s;
+}
+.scroll-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.scroll-top:hover { background: var(--accent-dk); transform: translateY(-3px); }
+.scroll-top:active { transform: translateY(-1px); }
+.scroll-top-label { font-size: .56rem; font-weight: 700; letter-spacing: .08em; }
+
+/* =====================================================================
    News (お知らせ) — Japanese dated list
    ===================================================================== */
 .news-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 1.8rem; }

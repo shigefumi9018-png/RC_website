@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { siteConfig } from "@/lib/site";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { ScrollTop } from "@/components/ScrollTop";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import "./globals.css";
 
@@ -106,6 +107,7 @@ export default function RootLayout({
         <LanguageProvider>
           {children}
           <ScrollReveal />
+          <ScrollTop />
         </LanguageProvider>
       </body>
     </html>
