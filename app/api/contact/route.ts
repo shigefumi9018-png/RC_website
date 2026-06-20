@@ -75,8 +75,8 @@ export async function POST(request: Request) {
   const name = (data.name || "").trim();
   const email = (data.email || "").trim();
   const message = (data.message || "").trim();
-  const company = (data.companyName || "").trim() || "—";
-  const service = (data.service || "").trim() || "—";
+  const company = (data.companyName || "").trim() || "Not provided";
+  const service = (data.service || "").trim() || "Not specified";
 
   if (!name || !email || !message) {
     return NextResponse.json(
@@ -128,7 +128,7 @@ export async function POST(request: Request) {
     <p style="color:#9aa7b4;font-size:12px;margin-top:18px">Received ${receivedAt}</p>`;
 
   const teamText =
-    `New enquiry — A3 Tech Group\n\n` +
+    `New enquiry · A3 Tech Group\n\n` +
     `Name:    ${name}\nEmail:   ${email}\nCompany: ${company}\nTopic:   ${service}\n\n` +
     `Message:\n${message}\n\nReceived ${receivedAt}`;
 
@@ -149,7 +149,7 @@ export async function POST(request: Request) {
     <p style="margin:0 0 18px">
       <a href="${siteConfig.calendly}" style="display:inline-block;background:#e34234;color:#fff;text-decoration:none;padding:10px 18px;border-radius:999px;font-size:14px">Book a call →</a>
     </p>
-    <p style="font-size:14px;color:#5f6b78;line-height:1.7;margin:0">— The A3 Tech Group team<br/>Tokyo, Japan</p>`;
+    <p style="font-size:14px;color:#5f6b78;line-height:1.7;margin:0">The A3 Tech Group team<br/>Tokyo, Japan</p>`;
 
   const userText =
     `Hi ${name},\n\n` +
@@ -157,7 +157,7 @@ export async function POST(request: Request) {
     `will get back to you within one business day.\n\n` +
     `Your message:\n${message}\n\n` +
     `Prefer to talk sooner? Book a call: ${siteConfig.calendly}\n\n` +
-    `— The A3 Tech Group team\nTokyo, Japan`;
+    `The A3 Tech Group team\nTokyo, Japan`;
 
   try {
     const resend = new Resend(apiKey);
@@ -188,7 +188,7 @@ export async function POST(request: Request) {
       from,
       to: email,
       replyTo: to,
-      subject: "We've received your message — A3 Tech Group",
+      subject: "We've received your message · A3 Tech Group",
       html: shell("Thanks for getting in touch", userInner),
       text: userText,
     });

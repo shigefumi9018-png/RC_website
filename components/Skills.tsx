@@ -5,13 +5,13 @@ import { Slider } from "./Slider";
 
 // Real photography (Unsplash CDN). Locale-independent, parallel to skills.items.
 const IMAGES = [
-  "https://images.unsplash.com/photo-1461749280684-dccba630e2f6", // full-stack / code
+  "https://images.unsplash.com/photo-1623479322729-28b25c16b011", // full-stack: young developer at work
   "https://images.unsplash.com/photo-1620712943543-bcc4688e7485", // AI automation
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71", // CMS / dashboard
-  "https://images.unsplash.com/photo-1556761175-5973dc0f32e7", // CRM / office
+  "https://images.unsplash.com/photo-1551288049-bebda4e38f71", // CMS / content dashboard
+  "https://images.unsplash.com/photo-1460925895917-afdab827c52f", // CRM / analytics dashboard
 ];
 
-const img = (url: string) => `${url}?auto=format&fit=crop&w=1100&q=80`;
+const img = (url: string) => `${url}?auto=format&fit=crop&w=1600&q=82`;
 
 export function Skills() {
   const t = useT();

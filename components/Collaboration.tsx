@@ -3,14 +3,15 @@
 import { useT } from "./LanguageProvider";
 import { Slider } from "./Slider";
 
+// Young (25–30) Asian developers & teams, high-resolution.
 const IMAGES = [
-  "https://images.unsplash.com/photo-1522071820081-009f0129c71c", // team collaborating
-  "https://images.unsplash.com/photo-1542744173-8e7e53415bb0", // business meeting
-  "https://images.unsplash.com/photo-1531973576160-7125cd663d86", // handshake
-  "https://images.unsplash.com/photo-1504384308090-c894fdcc538d", // office team
+  "https://images.unsplash.com/photo-1632910121591-29e2484c0259", // two young devs collaborating
+  "https://images.unsplash.com/photo-1601513042740-3f9041642307", // young Asian team meeting
+  "https://images.unsplash.com/photo-1667960733570-ddbbee6f4404", // Asian business/founder team
+  "https://images.unsplash.com/photo-1650784854790-fb6c2ed400d3", // Asian professional women team
 ];
 
-const img = (url: string) => `${url}?auto=format&fit=crop&w=1200&q=80`;
+const img = (url: string) => `${url}?auto=format&fit=crop&w=1600&q=82`;
 
 export function Collaboration() {
   const t = useT();
@@ -43,6 +44,8 @@ export function Collaboration() {
               <p key={i}>{p}</p>
             ))}
             <p className="collab-notech">{c.noTech}</p>
+            <p className="collab-revenue">{c.revenue}</p>
+            <p className="collab-meeting">{c.meetingNote}</p>
             <p className="collab-closing">{c.closing}</p>
             <a className="btn btn-primary" href="#contact">
               {c.cta}
