@@ -283,7 +283,6 @@ const en: Dict = {
       { alt: "Two young developers collaborating at a laptop", caption: "Shared goals, honest communication" },
       { alt: "A young team meeting around a table", caption: "Partnerships that grow over time" },
       { alt: "A confident founding team", caption: "Trust first, everything follows" },
-      { alt: "A professional team working together", caption: "Building something that lasts" },
     ],
   },
   philosophy: {
