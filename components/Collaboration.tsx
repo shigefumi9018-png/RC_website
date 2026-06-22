@@ -8,7 +8,6 @@ const IMAGES = [
   "https://images.unsplash.com/photo-1632910121591-29e2484c0259", // two young devs collaborating
   "https://images.unsplash.com/photo-1601513042740-3f9041642307", // young Asian team meeting
   "https://images.unsplash.com/photo-1667960733570-ddbbee6f4404", // Asian business/founder team
-  "https://images.unsplash.com/photo-1650784854790-fb6c2ed400d3", // Asian professional women team
 ];
 
 const img = (url: string) => `${url}?auto=format&fit=crop&w=1600&q=82`;
