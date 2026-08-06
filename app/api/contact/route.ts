@@ -96,7 +96,7 @@ export async function POST(request: Request) {
 
   const receivedAt = new Date().toISOString();
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO || "seniordev8859@gmail.com";
+  const to = process.env.CONTACT_TO || "seniordev88590@gmail.com";
   const from =
     process.env.CONTACT_FROM || "A3 Tech Group <noreply@a3techgroup.com>";
 

@@ -34,7 +34,7 @@ npm start
 Configured in [`.env.local`](.env.example) (gitignored):
 ```
 RESEND_API_KEY=...                                  # your Resend key
-CONTACT_TO=seniordev8859@gmail.com                  # where enquiries land
+CONTACT_TO=seniordev88590@gmail.com                  # where enquiries land
 CONTACT_FROM=A3 Tech Group <noreply@a3techgroup.com> # verified-domain sender
 ```
 The domain `a3techgroup.com` is verified in Resend, so mail delivers to any
