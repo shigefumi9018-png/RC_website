@@ -23,7 +23,7 @@ export const siteConfig = {
   },
   founders: [
     { name: "Daniel (Hiro Tanaka)", role: "Co-Founder & CTO" },
-    { name: "Shigefumi Kobayashi", role: "Co-Founder & CEO" },
+    { name: "Ryota Masashi", role: "Co-Founder & CEO" },
   ],
   nav: [
     { href: "#services", label: "Services" },
