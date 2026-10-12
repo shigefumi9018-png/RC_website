@@ -11,7 +11,7 @@ export const siteConfig = {
   // Production domain (verified in Resend for email delivery).
   url: "https://a3techgroup.com",
   locale: "en_US",
-  calendly: "https://calendly.com/seniordev88590/30min",
+  calendly: "https://calendly.com/shigefumi9018/30min",
   location: {
     city: "Tokyo",
     region: "Tokyo",
