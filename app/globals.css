@@ -81,7 +81,7 @@ a { color: inherit; text-decoration: none; }
 .lang-btn {
   font-family: inherit; font-size: .78rem; font-weight: 600; letter-spacing: .02em;
   color: var(--muted); background: transparent; border: 0; cursor: pointer;
-  padding: .3rem .7rem; border-radius: 999px; line-height: 1;
+  padding: .3rem .7rem; border-radius: 999px; line-height: 1; white-space: nowrap;
   transition: background .2s, color .2s;
 }
 .lang-btn:hover { color: var(--ink); }
@@ -114,8 +114,8 @@ em { font-style: normal; color: var(--accent); }
 .brand-text { font-size: 1.18rem; letter-spacing: -0.01em; display: inline-flex; align-items: baseline; gap: .45rem; }
 .brand-jp { font-family: var(--serif); font-size: .62rem; letter-spacing: .25em; color: var(--muted); font-weight: 500; }
 
-.nav { display: flex; align-items: center; gap: clamp(1rem, 2.4vw, 2.2rem); }
-.nav a { font-size: .94rem; color: var(--ink-soft); position: relative; padding: .3rem 0; transition: color .2s; }
+.nav { display: flex; align-items: center; gap: clamp(1rem, 1.6vw, 2.2rem); }
+.nav a { font-size: .94rem; color: var(--ink-soft); position: relative; padding: .3rem 0; transition: color .2s; white-space: nowrap; }
 .nav a:not(.nav-cta)::after {
   content: ""; position: absolute; left: 0; bottom: 0; height: 1.5px; width: 0;
   background: var(--accent); transition: width .25s var(--ease);
@@ -160,18 +160,20 @@ em { font-style: normal; color: var(--accent); }
 /* =====================================================================
    Hero
    ===================================================================== */
-.hero { position: relative; padding-top: clamp(2.5rem, 7vw, 5rem); padding-bottom: clamp(3rem, 8vw, 6rem); }
+/* overflow-x: clip keeps the glow behind the code card from widening the page on phones
+   (iOS Safari ignores body { overflow-x: hidden }) */
+.hero { position: relative; overflow-x: clip; padding-top: clamp(1.75rem, 5vw, 3.75rem); padding-bottom: clamp(2.25rem, 6vw, 4.5rem); }
 .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
 
 .eyebrow { display: inline-flex; align-items: center; gap: .55rem; font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 1.3rem; }
 .tick { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent); animation: pulse 2.6s ease-in-out infinite; }
 @keyframes pulse { 50% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--accent) 4%, transparent); } }
 
-.hero h1 { margin-bottom: 1.5rem; }
-.lede { font-size: 1.16rem; color: var(--ink-soft); max-width: 34ch; margin-bottom: 2.2rem; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-bottom: 3rem; }
+.hero h1 { margin-bottom: 1.2rem; }
+.lede { font-size: 1.16rem; color: var(--ink-soft); max-width: 34ch; margin-bottom: 1.8rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-bottom: 2.4rem; }
 
-.hero-stats { display: flex; flex-wrap: wrap; gap: clamp(1.5rem, 4vw, 3rem); padding-top: 1.8rem; border-top: 1px solid var(--line); }
+.hero-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 2.5rem); padding-top: 1.8rem; border-top: 1px solid var(--line); }
 .hero-stats dt { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; }
 .hero-stats dd { font-size: .85rem; color: var(--muted); }
 
@@ -210,13 +212,17 @@ em { font-style: normal; color: var(--accent); }
 /* =====================================================================
    Sections
    ===================================================================== */
-.section { padding-block: clamp(4rem, 9vw, 7.5rem); }
+.section { padding-block: clamp(2.75rem, 6vw, 4.75rem); }
 .section-alt { background: var(--paper-2); border-block: 1px solid var(--line); }
+/* Neighbouring sections on the same background: don't stack two paddings */
+.section:not(.section-alt, .meaning, .philosophy) + .section:not(.section-alt, .meaning, .philosophy),
+.section-alt + .section-alt { padding-top: 0; }
+.section-alt + .section-alt { border-top: 0; }
 
-.section-head { max-width: 56ch; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.section-head { max-width: 56ch; margin-bottom: clamp(1.75rem, 3.5vw, 2.75rem); }
 .section-head--center { margin-inline: auto; text-align: center; }
-.section-kicker { font-size: .82rem; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 1rem; }
-.section-head h2 { margin-bottom: 1.1rem; }
+.section-kicker { font-size: .82rem; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: .7rem; }
+.section-head h2 { margin-bottom: .8rem; }
 .section-sub { color: var(--muted); font-size: 1.1rem; }
 
 /* ---------- Service cards ---------- */
@@ -348,8 +354,8 @@ em { font-style: normal; color: var(--accent); }
 /* =====================================================================
    Footer
    ===================================================================== */
-.site-footer { background: var(--ink); color: var(--paper); padding-top: clamp(3rem, 6vw, 4.5rem); }
-.footer-inner { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; padding-bottom: 2.5rem; }
+.site-footer { background: var(--ink); color: var(--paper); padding-top: clamp(2.5rem, 5vw, 3.5rem); }
+.footer-inner { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; padding-bottom: 2rem; }
 .footer-brand .brand { color: var(--paper); margin-bottom: 1rem; }
 .footer-brand .brand-text { color: var(--paper); }
 .footer-brand p { color: #9aa7b4; font-size: .95rem; max-width: 30ch; }
@@ -388,7 +394,7 @@ em { font-style: normal; color: var(--accent); }
 .slider-arrow:active { transform: translateY(-50%) scale(.94); }
 .slider-arrow--prev { left: 14px; }
 .slider-arrow--next { right: 14px; }
-.slider-dots { display: flex; gap: .5rem; justify-content: center; margin-top: 1.5rem; }
+.slider-dots { display: flex; gap: .5rem; justify-content: center; margin-top: 1.1rem; }
 .slider-dot { width: 9px; height: 9px; border-radius: 999px; border: 0; background: var(--line); cursor: pointer; padding: 0; transition: background .25s, width .25s var(--ease); }
 .slider-dot:hover { background: var(--muted); }
 .slider-dot.active { background: var(--accent); width: 28px; }
@@ -398,23 +404,26 @@ em { font-style: normal; color: var(--accent); }
 .skill-media { position: relative; min-height: 360px; background: linear-gradient(155deg, var(--ink), var(--ink-soft)); }
 .skill-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .skill-badge { position: absolute; top: 1rem; left: 1rem; z-index: 1; background: var(--ink); color: var(--paper); font-family: var(--serif); font-weight: 700; font-size: .8rem; letter-spacing: .08em; padding: .3rem .65rem; border-radius: 8px; }
-.skill-body { padding: clamp(1.6rem, 3.5vw, 2.8rem); display: flex; flex-direction: column; justify-content: center; }
+/* extra right padding keeps the text clear of the slider's next arrow */
+.skill-body { padding: clamp(1.6rem, 3.5vw, 2.8rem); padding-right: 4.4rem; display: flex; flex-direction: column; justify-content: center; }
 .skill-body h3 { font-size: clamp(1.4rem, 2.5vw, 1.7rem); margin-bottom: .9rem; }
 .skill-body p { color: var(--ink-soft); margin-bottom: 1.3rem; }
 
 /* =====================================================================
    Experience / track record
    ===================================================================== */
-.exp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1rem, 2vw, 1.4rem); }
+/* Flex (not grid) so a short last row stays centred whatever the item count */
+.exp-grid { --exp-gap: clamp(1rem, 2vw, 1.4rem); --exp-cols: 3; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--exp-gap); }
 .exp-card {
+  flex: 0 1 calc((100% - (var(--exp-cols) - 1) * var(--exp-gap)) / var(--exp-cols));
   background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 2rem 1.6rem; text-align: center;
+  padding: 1.7rem 1.4rem; text-align: center;
   transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s;
 }
 .exp-card:hover { transform: translateY(-4px); box-shadow: 0 26px 46px -30px rgba(13,27,42,.3); border-color: transparent; }
 .exp-name { font-family: var(--serif); font-weight: 700; font-size: 1.5rem; color: var(--ink); margin-bottom: .4rem; }
 .exp-note { color: var(--muted); font-size: .95rem; }
-.exp-handle { text-align: center; max-width: 62ch; margin: 2.4rem auto 0; color: var(--ink-soft); font-size: 1.1rem; }
+.exp-handle { text-align: center; max-width: 62ch; margin: 1.8rem auto 0; color: var(--ink-soft); font-size: 1.1rem; }
 
 /* =====================================================================
    Collaboration / partnership
@@ -456,7 +465,75 @@ em { font-style: normal; color: var(--accent); }
 .founder-exp { list-style: none; padding: 0; display: grid; gap: .5rem; }
 .founder-exp li { position: relative; padding-left: 1.4rem; font-size: .92rem; color: var(--ink-soft); }
 .founder-exp li::before { content: ""; position: absolute; left: 0; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-.founders-cta { text-align: center; margin-top: clamp(2rem, 4vw, 3rem); }
+.founders-cta { text-align: center; margin-top: clamp(1.5rem, 3vw, 2.25rem); }
+
+/* =====================================================================
+   Foundation: three disciplines (3D animated feature)
+   ===================================================================== */
+.meaning {
+  position: relative; overflow: hidden; border: 0; color: var(--paper);
+  background: linear-gradient(160deg, #0f1b2e 0%, #15294a 55%, #1b3666 100%);
+}
+.meaning::before {
+  content: ""; position: absolute; top: -22%; left: 50%; transform: translateX(-50%);
+  width: 620px; height: 620px; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(26,86,219,.30), transparent 70%);
+  animation: meaningGlow 9s ease-in-out infinite;
+}
+@keyframes meaningGlow { 50% { opacity: .55; transform: translateX(-50%) scale(1.12); } }
+.meaning .section-head h2 { color: var(--paper); }
+.meaning .section-sub { color: #c2ccd6; }
+
+.meaning-scene { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.2rem, 2.5vw, 2rem); perspective: 1300px; }
+.meaning-card { transform-style: preserve-3d; transition: transform .6s var(--ease); }
+.meaning-card-inner {
+  position: relative; transform-style: preserve-3d; overflow: hidden;
+  padding: 2.4rem 1.9rem 2.1rem; border-radius: 18px;
+  background: linear-gradient(155deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 30px 60px -32px rgba(0,0,0,.65);
+  backdrop-filter: blur(6px);
+  animation: meaningFloat 6s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.8s);
+}
+@keyframes meaningFloat { 50% { transform: translateY(-9px); } }
+.meaning-card:hover { transform: rotateX(7deg) rotateY(-9deg) translateY(-4px); }
+
+.meaning-ghost {
+  position: absolute; top: -12px; right: -4px; line-height: 1; pointer-events: none;
+  font-family: var(--serif); font-weight: 700; font-size: 7rem;
+  color: rgba(96,150,255,.20); transform: translateZ(-30px);
+}
+.meaning-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 56px; height: 56px; border-radius: 15px; margin-bottom: 1.3rem;
+  background: var(--accent); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 1.4rem;
+  box-shadow: 0 14px 30px -10px var(--accent); transform: translateZ(45px);
+}
+.meaning-card h3 { color: var(--paper); font-size: 1.5rem; margin-bottom: .6rem; transform: translateZ(28px); }
+.meaning-card p { color: #c2ccd6; font-size: 1rem; transform: translateZ(16px); }
+.meaning-card-inner::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(120deg, transparent 32%, rgba(255,255,255,.13) 50%, transparent 68%);
+  transform: translateX(-120%); transition: transform .9s var(--ease);
+}
+.meaning-card:hover .meaning-card-inner::after { transform: translateX(120%); }
+
+.meaning-triads { margin-top: clamp(1.8rem, 3.5vw, 2.6rem); }
+.meaning-triads-label { text-align: center; color: #93a2b2; font-size: .82rem; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 1.4rem; }
+.triad-rows { display: grid; gap: .8rem; max-width: 780px; margin-inline: auto; }
+.triad-row {
+  display: grid; grid-template-columns: 160px 1fr; align-items: center; gap: 1.2rem;
+  padding: 1rem 1.4rem; border-radius: 14px;
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.10);
+  transition: transform .3s var(--ease), background .3s, border-color .3s;
+}
+.triad-row:hover { transform: translateX(6px); background: rgba(255,255,255,.08); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+.triad-theme { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.triad-words { font-family: var(--serif); font-size: clamp(1.05rem, 2.2vw, 1.35rem); color: var(--paper); display: flex; flex-wrap: wrap; align-items: baseline; }
+.triad-word { display: inline-flex; align-items: baseline; }
+.triad-word b { color: var(--accent); font-weight: 700; }
+.triad-dot { color: #6b7e90; margin: 0 .55rem; }
 
 /* =====================================================================
    Why collaborate
@@ -476,7 +553,7 @@ em { font-style: normal; color: var(--accent); }
    ===================================================================== */
 .philosophy { background: var(--ink); color: var(--paper); border: 0; }
 .philosophy-kicker { color: var(--accent); text-align: center; }
-.philosophy-quote { font-family: var(--serif); font-weight: 600; font-size: clamp(1.5rem, 3.2vw, 2.25rem); line-height: 1.4; text-align: center; max-width: 26ch; margin: 1rem auto 2.6rem; color: var(--paper); }
+.philosophy-quote { font-family: var(--serif); font-weight: 600; font-size: clamp(1.5rem, 3.2vw, 2.25rem); line-height: 1.4; text-align: center; max-width: 26ch; margin: 1rem auto 2rem; color: var(--paper); }
 .philosophy-quote::before { content: "\201C"; color: var(--accent); }
 .philosophy-quote::after { content: "\201D"; color: var(--accent); }
 .philosophy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.2rem, 2.5vw, 2rem); max-width: 1000px; margin-inline: auto; }
@@ -567,46 +644,74 @@ em { font-style: normal; color: var(--accent); }
 /* =====================================================================
    Responsive
    ===================================================================== */
+/* The full nav (links + language switcher + CTA) needs ~1100px in Japanese; below that, use the menu */
+@media (max-width: 1100px) {
+  .nav { display: none; }
+  .nav-toggle { display: flex; }
+  .mobile-menu.open { display: flex; }
+}
 @media (max-width: 920px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-visual { order: -1; max-width: 460px; }
+  .hero-visual { width: 100%; max-width: 460px; margin-inline: auto; }
   .approach-grid, .team-grid { grid-template-columns: 1fr; }
   .approach-grid .section-head { position: static; }
   .stack-grid { grid-template-columns: repeat(2, 1fr); }
   .team-portrait { max-width: 320px; }
   .skill-slide { grid-template-columns: 1fr; }
   .skill-media { min-height: 240px; }
+  /* Keep the arrows on the photo instead of over the text beneath it */
+  .skills-slider .slider-arrow { top: 120px; }
+  .skill-body { padding-right: clamp(1.6rem, 3.5vw, 2.8rem); }
   .collab-grid { grid-template-columns: 1fr; }
   .founders-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
   .why-card--lead { grid-column: auto; }
   .results-grid { grid-template-columns: 1fr; }
-  .exp-grid { grid-template-columns: repeat(2, 1fr); }
+  .exp-grid { --exp-cols: 2; }
+  .meaning-scene { grid-template-columns: 1fr; }
   .philosophy-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 900px) {
   .contact-layout { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
-  .nav { display: none; }
-  .nav-toggle { display: flex; }
-  .mobile-menu.open { display: flex; }
+  .header-inner { height: 64px; }
   .cards { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; gap: 1.8rem; }
-  .hero-stats { gap: 1.5rem 2rem; }
+  .hero-card { transform: none; }
+  .code { font-size: .78rem; padding: 1.1rem 1.2rem; }
+  .hero-actions { margin-bottom: 2rem; }
+  .hero-stats { gap: 1rem; padding-top: 1.4rem; }
+  .hero-stats dt { font-size: 1.1rem; }
+  .hero-stats dd { font-size: .78rem; line-height: 1.4; }
   .field-row { grid-template-columns: 1fr; }
-  .exp-grid { grid-template-columns: 1fr; }
+  .exp-card { padding: 1.2rem .9rem; }
+  .exp-name { font-size: 1.2rem; }
+  .exp-note { font-size: .85rem; }
+  .meaning-card-inner { padding: 1.6rem 1.4rem 1.5rem; }
+  .meaning-badge { width: 44px; height: 44px; border-radius: 12px; font-size: 1.1rem; margin-bottom: .9rem; }
+  .meaning-ghost { font-size: 5rem; }
+  .triad-row { grid-template-columns: 1fr; gap: .4rem; }
+  .steps li { padding: 1.25rem 1.2rem; gap: 1rem; }
+  /* Pills don't fit two-up on a phone; show a compact two-column checklist instead */
+  .why-points { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem .9rem; }
+  .why-points li,
+  .why-card--lead .why-points li { position: relative; background: none; border: 0; border-radius: 0; padding: 0 0 0 .95rem; font-size: .84rem; line-height: 1.45; color: var(--ink-soft); }
+  .why-points li::before { content: ""; position: absolute; left: 0; top: .55em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
   .founder-card { flex-direction: column; }
   .slider-arrow { width: 38px; height: 38px; }
   .philosophy-grid { grid-template-columns: 1fr; }
-  .company-row { grid-template-columns: 1fr; }
-  .company-row dt { border-right: 0; border-bottom: 1px solid var(--line); }
+  .company-row { grid-template-columns: 136px 1fr; }
+  .company-row dt, .company-row dd { padding: .75rem; }
+  .company-row dt { font-size: .8rem; }
+  .company-row dd { font-size: .9rem; }
+  .contact-card { padding: 1.3rem 1.1rem; }
+  .footer-nav { grid-template-columns: 1fr 1fr; gap: .7rem 1.5rem; }
   .news-item a { flex-wrap: wrap; gap: .5rem .9rem; }
   .news-title { flex-basis: 100%; order: 3; }
   .news-arrow { display: none; }
 }
 @media (max-width: 420px) {
   body { font-size: 16px; }
-  .stack-grid { grid-template-columns: 1fr; }
   .brand-jp { display: none; }
 }

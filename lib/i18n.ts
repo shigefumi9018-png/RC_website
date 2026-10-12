@@ -33,6 +33,12 @@ type Dict = {
     stats: { dt: string; dd: string }[];
   };
   trust: { label: string; items: string[] };
+  meaning: {
+    kicker: string; title: string; sub: string;
+    items: { num: string; word: string; body: string }[];
+    triadsLabel: string;
+    triads: { theme: string; words: string[] }[];
+  };
   skills: {
     kicker: string; title: string; sub: string;
     items: { num: string; title: string; body: string; tags: string[]; alt: string }[];
@@ -94,7 +100,7 @@ const en: Dict = {
     kicker: "News", title: "Latest updates", more: "View all news",
     items: [
       { date: "2026.06.20", cat: "Notice", title: "RemoCollab corporate website renewed." },
-      { date: "2026.05.15", cat: "Project", title: "Aligner AI project is now underway." },
+      { date: "2026.05.15", cat: "Project", title: "Alignerr AI project is now underway." },
       { date: "2026.04.02", cat: "Service", title: "AI automation partnership program launched." },
       { date: "2026.02.10", cat: "Notice", title: "Now accepting partnership inquiries from the US and Canada." },
     ],
@@ -125,6 +131,22 @@ const en: Dict = {
   trust: {
     label: "Trusted across",
     items: ["Fintech", "SaaS", "E-commerce", "Healthcare", "Manufacturing", "EdTech"],
+  },
+  meaning: {
+    kicker: "Our foundation",
+    title: "Three disciplines behind every project.",
+    sub: "Architecture, Analytics, Automation. Three disciplines, one team, and the shape of how we work.",
+    items: [
+      { num: "01", word: "Architecture", body: "Systems designed to last and scale, built on clean foundations your team can grow on." },
+      { num: "02", word: "Analytics", body: "Turning data into clear decisions, so you can see what's working and what comes next." },
+      { num: "03", word: "Automation", body: "Letting software and AI handle the repetitive work, so your people do the work that matters." },
+    ],
+    triadsLabel: "Three ways we show up.",
+    triads: [
+      { theme: "How we build", words: ["Architecture", "Analytics", "Automation"] },
+      { theme: "How we partner", words: ["Align", "Assist", "Ascend"] },
+      { theme: "What you gain", words: ["Adapt", "Accelerate", "Achieve"] },
+    ],
   },
   skills: {
     kicker: "01 · Skills",
@@ -165,7 +187,8 @@ const en: Dict = {
     items: [
       { name: "Outlier", note: "AI training & model evaluation (ongoing)" },
       { name: "Mercor", note: "AI talent & data projects (ongoing)" },
-      { name: "Aligner", note: "AI alignment & data quality (ongoing)" },
+      { name: "Alignerr", note: "AI alignment & data quality (ongoing)" },
+      { name: "Snorkel", note: "Expert data & model evaluation (ongoing)" },
       { name: "3 full-stack apps", note: "web platforms in active development" },
     ],
   },
@@ -352,7 +375,7 @@ const ja: Dict = {
     kicker: "News", title: "お知らせ", more: "お知らせ一覧",
     items: [
       { date: "2026.06.20", cat: "お知らせ", title: "コーポレートサイトをリニューアルしました。" },
-      { date: "2026.05.15", cat: "プロジェクト", title: "Aligner AI プロジェクトを開始しました。" },
+      { date: "2026.05.15", cat: "プロジェクト", title: "Alignerr AI プロジェクトを開始しました。" },
       { date: "2026.04.02", cat: "サービス", title: "AI自動化パートナーシップ・プログラムを開始しました。" },
       { date: "2026.02.10", cat: "お知らせ", title: "米国・カナダからのパートナーシップのお問い合わせを受付開始しました。" },
     ],
@@ -383,6 +406,22 @@ const ja: Dict = {
   trust: {
     label: "対応領域",
     items: ["フィンテック", "SaaS", "EC", "ヘルスケア", "製造業", "EdTech"],
+  },
+  meaning: {
+    kicker: "私たちの土台",
+    title: "すべてのプロジェクトを支える、3つの専門領域。",
+    sub: "Architecture（設計）、Analytics（分析）、Automation（自動化）。3つの専門領域を、ひとつのチームで。私たちの働き方そのものです。",
+    items: [
+      { num: "01", word: "Architecture", body: "長く使え、拡張できるシステムを、チームが成長できる綺麗な土台の上に築きます。" },
+      { num: "02", word: "Analytics", body: "データを明確な意思決定へ。何がうまくいき、次に何をすべきかが見えるように。" },
+      { num: "03", word: "Automation", body: "繰り返しの作業はソフトウェアとAIに任せ、人は本当に大切な仕事に集中できます。" },
+    ],
+    triadsLabel: "3つの観点で示す、私たちの在り方。",
+    triads: [
+      { theme: "つくり方", words: ["Architecture", "Analytics", "Automation"] },
+      { theme: "寄り添い方", words: ["Align", "Assist", "Ascend"] },
+      { theme: "得られる成果", words: ["Adapt", "Accelerate", "Achieve"] },
+    ],
   },
   skills: {
     kicker: "01 · スキル",
@@ -423,7 +462,8 @@ const ja: Dict = {
     items: [
       { name: "Outlier", note: "AI研修・モデル評価（進行中）" },
       { name: "Mercor", note: "AI人材・データ案件（進行中）" },
-      { name: "Aligner", note: "AIアライメント・データ品質（進行中）" },
+      { name: "Alignerr", note: "AIアライメント・データ品質（進行中）" },
+      { name: "Snorkel", note: "専門データ・モデル評価（進行中）" },
       { name: "フルスタックアプリ 3件", note: "開発進行中のWebプラットフォーム" },
     ],
   },
@@ -519,7 +559,6 @@ const ja: Dict = {
       { alt: "ノートパソコンで協働する若手開発者2人", caption: "共有する目標と、率直な対話" },
       { alt: "テーブルを囲む若いチームのミーティング", caption: "時間をかけて育つパートナーシップ" },
       { alt: "自信に満ちた創業チーム", caption: "まず信頼から、すべてが続く" },
-      { alt: "協力して働くプロフェッショナルチーム", caption: "長く続くものを築く" },
     ],
   },
   philosophy: {
@@ -611,7 +650,7 @@ const zh: Dict = {
     kicker: "News", title: "最新动态", more: "查看全部",
     items: [
       { date: "2026.06.20", cat: "公告", title: "企业官网全新改版上线。" },
-      { date: "2026.05.15", cat: "项目", title: "Aligner AI 项目正式启动。" },
+      { date: "2026.05.15", cat: "项目", title: "Alignerr AI 项目正式启动。" },
       { date: "2026.04.02", cat: "服务", title: "AI 自动化合作伙伴计划上线。" },
       { date: "2026.02.10", cat: "公告", title: "开始受理来自美国与加拿大的合作咨询。" },
     ],
@@ -642,6 +681,22 @@ const zh: Dict = {
   trust: {
     label: "服务领域",
     items: ["金融科技", "SaaS", "电商", "医疗健康", "制造业", "教育科技"],
+  },
+  meaning: {
+    kicker: "我们的根基",
+    title: "支撑每个项目的三大领域。",
+    sub: "Architecture（架构）、Analytics（分析）、Automation（自动化）。三个领域，一支团队，也是我们工作的方式。",
+    items: [
+      { num: "01", word: "Architecture", body: "构建可长久使用、可扩展的系统，立于团队可成长的干净基础之上。" },
+      { num: "02", word: "Analytics", body: "把数据变为清晰的决策，让你看清什么有效、下一步该做什么。" },
+      { num: "03", word: "Automation", body: "把重复性工作交给软件与 AI，让团队专注于真正重要的事。" },
+    ],
+    triadsLabel: "三种我们的姿态。",
+    triads: [
+      { theme: "如何构建", words: ["Architecture", "Analytics", "Automation"] },
+      { theme: "如何协作", words: ["Align", "Assist", "Ascend"] },
+      { theme: "你的收获", words: ["Adapt", "Accelerate", "Achieve"] },
+    ],
   },
   skills: {
     kicker: "01 · 技能",
@@ -682,7 +737,8 @@ const zh: Dict = {
     items: [
       { name: "Outlier", note: "AI 培训与模型评估（进行中）" },
       { name: "Mercor", note: "AI 人才与数据项目（进行中）" },
-      { name: "Aligner", note: "AI 对齐与数据质量（进行中）" },
+      { name: "Alignerr", note: "AI 对齐与数据质量（进行中）" },
+      { name: "Snorkel", note: "专家数据与模型评估（进行中）" },
       { name: "3 个全栈应用", note: "正在积极开发的 Web 平台" },
     ],
   },
@@ -778,7 +834,6 @@ const zh: Dict = {
       { alt: "两位年轻开发者在笔记本前协作", caption: "共同的目标，坦诚的沟通" },
       { alt: "年轻团队围桌会议", caption: "随时间成长的合作" },
       { alt: "自信的创始团队", caption: "信任为先，水到渠成" },
-      { alt: "协作的专业团队", caption: "打造长久的价值" },
     ],
   },
   philosophy: {

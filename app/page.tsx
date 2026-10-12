@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { TrustStrip } from "@/components/TrustStrip";
 import { News } from "@/components/News";
+import { Meaning } from "@/components/Meaning";
 import { Skills } from "@/components/Skills";
 import { Experience } from "@/components/Experience";
 import { WhyCollaborate } from "@/components/WhyCollaborate";
@@ -26,6 +27,7 @@ export default function Home() {
         <Hero />
         <TrustStrip />
         <News />
+        <Meaning />
         <Skills />
         <Experience />
         <WhyCollaborate />
