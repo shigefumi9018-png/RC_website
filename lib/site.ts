@@ -3,11 +3,11 @@
  * the booking link / domain in one place.
  */
 export const siteConfig = {
-  name: "A3 Tech Group",
-  legalName: "A3 Tech Group",
+  name: "RemoCollab",
+  legalName: "RemoCollab",
   tagline: "Software Engineering & AI, Built in Japan",
   description:
-    "A3 Tech Group is a Tokyo-based software studio delivering full-stack engineering, applied AI systems, and hands-on AI training for teams across Japan and beyond.",
+    "RemoCollab is a Tokyo-based software studio delivering full-stack engineering, applied AI systems, and hands-on AI training for teams across Japan and beyond.",
   // Production domain (verified in Resend for email delivery).
   url: "https://a3techgroup.com",
   locale: "en_US",

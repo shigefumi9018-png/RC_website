@@ -46,14 +46,14 @@ function shell(title: string, inner: string) {
   <div style="background:#f3f6fb;padding:32px 0;font-family:Arial,Helvetica,sans-serif">
     <div style="max-width:560px;margin:0 auto;color:#0f1b2e">
       <div style="background:#0f1b2e;color:#f3f6fb;padding:22px 26px;border-radius:12px 12px 0 0">
-        <div style="font-size:13px;letter-spacing:3px;color:#1a56db;text-transform:uppercase">A3 Tech Group</div>
+        <div style="font-size:13px;letter-spacing:3px;color:#1a56db;text-transform:uppercase">RemoCollab</div>
         <h2 style="margin:6px 0 0;font-size:19px">${title}</h2>
       </div>
       <div style="background:#ffffff;border:1px solid #e3e8ef;border-top:0;border-radius:0 0 12px 12px;padding:26px">
         ${inner}
       </div>
       <p style="text-align:center;color:#9aa7b4;font-size:12px;margin-top:18px">
-        A3 Tech Group · Tokyo, Japan · <a href="${siteConfig.url}" style="color:#9aa7b4">a3techgroup.com</a>
+        RemoCollab · Tokyo, Japan · <a href="${siteConfig.url}" style="color:#9aa7b4">a3techgroup.com</a>
       </p>
     </div>
   </div>`;
@@ -98,7 +98,7 @@ export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO || "seniordev88590@gmail.com";
   const from =
-    process.env.CONTACT_FROM || "A3 Tech Group <noreply@a3techgroup.com>";
+    process.env.CONTACT_FROM || "RemoCollab <noreply@a3techgroup.com>";
 
   // Fallback: no key configured — log so nothing is lost in development.
   if (!apiKey) {
@@ -128,7 +128,7 @@ export async function POST(request: Request) {
     <p style="color:#9aa7b4;font-size:12px;margin-top:18px">Received ${receivedAt}</p>`;
 
   const teamText =
-    `New enquiry · A3 Tech Group\n\n` +
+    `New enquiry · RemoCollab\n\n` +
     `Name:    ${name}\nEmail:   ${email}\nCompany: ${company}\nTopic:   ${service}\n\n` +
     `Message:\n${message}\n\nReceived ${receivedAt}`;
 
@@ -136,7 +136,7 @@ export async function POST(request: Request) {
   const userInner = `
     <p style="font-size:15px;line-height:1.7;margin:0 0 14px">Hi ${escapeHtml(name)},</p>
     <p style="font-size:15px;line-height:1.7;margin:0 0 14px">
-      Thank you for reaching out to <strong>A3 Tech Group</strong>. We've received your
+      Thank you for reaching out to <strong>RemoCollab</strong>. We've received your
       message and a member of our team will get back to you within one business day.
     </p>
     <div style="background:#f3f6fb;border:1px solid #e3e8ef;border-radius:10px;padding:14px 16px;margin:18px 0">
@@ -149,15 +149,15 @@ export async function POST(request: Request) {
     <p style="margin:0 0 18px">
       <a href="${siteConfig.calendly}" style="display:inline-block;background:#1a56db;color:#fff;text-decoration:none;padding:10px 18px;border-radius:999px;font-size:14px">Book a call →</a>
     </p>
-    <p style="font-size:14px;color:#5f6b78;line-height:1.7;margin:0">The A3 Tech Group team<br/>Tokyo, Japan</p>`;
+    <p style="font-size:14px;color:#5f6b78;line-height:1.7;margin:0">The RemoCollab team<br/>Tokyo, Japan</p>`;
 
   const userText =
     `Hi ${name},\n\n` +
-    `Thank you for reaching out to A3 Tech Group. We've received your message and ` +
+    `Thank you for reaching out to RemoCollab. We've received your message and ` +
     `will get back to you within one business day.\n\n` +
     `Your message:\n${message}\n\n` +
     `Prefer to talk sooner? Book a call: ${siteConfig.calendly}\n\n` +
-    `The A3 Tech Group team\nTokyo, Japan`;
+    `The RemoCollab team\nTokyo, Japan`;
 
   try {
     const resend = new Resend(apiKey);
@@ -188,7 +188,7 @@ export async function POST(request: Request) {
       from,
       to: email,
       replyTo: to,
-      subject: "We've received your message · A3 Tech Group",
+      subject: "We've received your message · RemoCollab",
       html: shell("Thanks for getting in touch", userInner),
       text: userText,
     });

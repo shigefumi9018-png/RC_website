@@ -1,7 +1,6 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { TrustStrip } from "@/components/TrustStrip";
-import { Meaning } from "@/components/Meaning";
 import { News } from "@/components/News";
 import { Skills } from "@/components/Skills";
 import { Experience } from "@/components/Experience";
@@ -27,7 +26,6 @@ export default function Home() {
         <Hero />
         <TrustStrip />
         <News />
-        <Meaning />
         <Skills />
         <Experience />
         <WhyCollaborate />

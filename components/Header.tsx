@@ -39,7 +39,7 @@ export function Header() {
       <div className="wrap header-inner">
         <a className="brand" href="#top" aria-label={`${siteConfig.name} home`}>
           <Logo size={34} />
-          <span className="brand-text">A3&nbsp;Tech&nbsp;Group</span>
+          <span className="brand-text">RemoCollab</span>
         </a>
 
         <nav className="nav" aria-label="Primary">

@@ -1,6 +1,6 @@
-# A3 Tech Group — Company Website
+# RemoCollab — Company Website
 
-A professional portfolio site for **A3 Tech Group**, a Tokyo-based IT company:
+A professional portfolio site for **RemoCollab**, a Tokyo-based IT company:
 full-stack engineering, applied AI, and hands-on AI training.
 
 Built with **Next.js 16 (App Router) + React 19 + TypeScript**.
@@ -35,7 +35,7 @@ Configured in [`.env.local`](.env.example) (gitignored):
 ```
 RESEND_API_KEY=...                                  # your Resend key
 CONTACT_TO=seniordev88590@gmail.com                  # where enquiries land
-CONTACT_FROM=A3 Tech Group <noreply@a3techgroup.com> # verified-domain sender
+CONTACT_FROM=RemoCollab <noreply@a3techgroup.com> # verified-domain sender
 ```
 The domain `a3techgroup.com` is verified in Resend, so mail delivers to any
 recipient. On submit, the API ([`app/api/contact/route.ts`](app/api/contact/route.ts)):

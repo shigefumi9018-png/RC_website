@@ -27,7 +27,7 @@ export const faqItems: Record<Locale, FaqItem[]> = {
     { q: "How do you help businesses scale?", a: "We build systems that handle growth: solid architecture, automation that removes bottlenecks, and infrastructure that expands with demand instead of breaking under it." },
     { q: "What happens if project requirements evolve?", a: "We expect them to. Our process is built for change, so evolving requirements are handled calmly through re-prioritisation rather than treated as a crisis." },
     { q: "How do you measure project success?", a: "By outcomes that matter to you: time saved, revenue enabled, users served, or risk reduced. We agree on what success looks like up front and measure against it." },
-    { q: "Why should a company choose A3 Tech Group instead of a traditional agency?", a: "Because we act as a long-term partner, not a billable vendor. You get senior people, business-first thinking, real AI expertise, and a team genuinely invested in your result." },
+    { q: "Why should a company choose RemoCollab instead of a traditional agency?", a: "Because we act as a long-term partner, not a billable vendor. You get senior people, business-first thinking, real AI expertise, and a team genuinely invested in your result." },
   ],
   ja: [
     { q: "どんな業界に対応していますか？", a: "フィンテック、SaaS、EC、ヘルスケア、製造、教育など幅広く対応します。業界よりも課題が重要で、ソフトウェアやAIで解決できることなら力になれます。" },
@@ -49,7 +49,7 @@ export const faqItems: Record<Locale, FaqItem[]> = {
     { q: "事業のスケールをどう支援しますか？", a: "成長に耐えるシステムを築きます。堅実なアーキテクチャ、ボトルネックを取り除く自動化、需要に合わせて拡張するインフラです。" },
     { q: "要件が途中で変わったら？", a: "変わる前提で進めます。私たちのプロセスは変化に対応できるよう設計されており、要件の変化は危機ではなく、優先順位の見直しで落ち着いて扱います。" },
     { q: "成功はどう測りますか？", a: "お客様にとって重要な成果で測ります。削減できた時間、生み出せた収益、対応できたユーザー、減らせたリスクなど。成功の定義を最初に合意し、それに照らして測定します。" },
-    { q: "従来の制作会社ではなく A3 を選ぶ理由は？", a: "私たちは請求書を出すベンダーではなく、長期のパートナーとして動くからです。シニア人材、ビジネス起点の思考、本物のAIの知見、そして成果に本気で投資するチームが手に入ります。" },
+    { q: "従来の制作会社ではなく RemoCollab を選ぶ理由は？", a: "私たちは請求書を出すベンダーではなく、長期のパートナーとして動くからです。シニア人材、ビジネス起点の思考、本物のAIの知見、そして成果に本気で投資するチームが手に入ります。" },
   ],
   zh: [
     { q: "你们服务哪些行业？", a: "我们服务金融科技、SaaS、电商、医疗、制造与教育等众多行业。比起行业，问题本身更重要；只要能用软件或 AI 解决，我们就能帮上忙。" },
@@ -71,6 +71,6 @@ export const faqItems: Record<Locale, FaqItem[]> = {
     { q: "你们如何帮助企业扩展？", a: "我们构建能承载增长的系统：稳健的架构、消除瓶颈的自动化，以及随需求扩展而非崩溃的基础设施。" },
     { q: "如果项目需求发生变化怎么办？", a: "我们本就预期它会变化。我们的流程为变化而设计，需求演进通过重新排序从容处理，而不会被当作危机。" },
     { q: "你们如何衡量项目的成功？", a: "用对你重要的结果衡量：节省的时间、带来的收入、服务的用户或降低的风险。我们在一开始就约定「成功的样子」，并据此衡量。" },
-    { q: "相比传统代理商，为何选择 A3 Tech Group？", a: "因为我们以长期伙伴的身份行动，而非按工时计费的供应商。你得到的是资深团队、业务优先的思考、真实的 AI 专长，以及真正在乎你结果的伙伴。" },
+    { q: "相比传统代理商，为何选择 RemoCollab？", a: "因为我们以长期伙伴的身份行动，而非按工时计费的供应商。你得到的是资深团队、业务优先的思考、真实的 AI 专长，以及真正在乎你结果的伙伴。" },
   ],
 };

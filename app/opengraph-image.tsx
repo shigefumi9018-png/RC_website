@@ -42,11 +42,11 @@ export default function OpengraphImage() {
                 fontWeight: 700,
               }}
             >
-              <span style={{ color: "#ffffff" }}>A</span>
-              <span style={{ color: "#1a56db" }}>3</span>
+              <span style={{ color: "#ffffff" }}>R</span>
+              <span style={{ color: "#1a56db" }}>C</span>
             </div>
             <div style={{ fontSize: 34, fontWeight: 700, color: "#0f1b2e" }}>
-              A3 Tech Group
+              RemoCollab
             </div>
           </div>
           <div style={{ fontSize: 24, color: "#6b7888", letterSpacing: 4 }}>

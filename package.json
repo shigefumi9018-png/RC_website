@@ -1,8 +1,8 @@
 {
-  "name": "a3group-web",
+  "name": "remocollab-web",
   "version": "1.0.0",
   "private": true,
-  "description": "A3 Group — Tokyo-based software engineering & AI studio",
+  "description": "RemoCollab — Tokyo-based software engineering & AI studio",
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",

@@ -33,12 +33,6 @@ type Dict = {
     stats: { dt: string; dd: string }[];
   };
   trust: { label: string; items: string[] };
-  meaning: {
-    kicker: string; title: string; sub: string;
-    items: { num: string; word: string; body: string }[];
-    triadsLabel: string;
-    triads: { theme: string; words: string[] }[];
-  };
   skills: {
     kicker: string; title: string; sub: string;
     items: { num: string; title: string; body: string; tags: string[]; alt: string }[];
@@ -99,7 +93,7 @@ const en: Dict = {
   news: {
     kicker: "News", title: "Latest updates", more: "View all news",
     items: [
-      { date: "2026.06.20", cat: "Notice", title: "A3 Tech Group corporate website renewed." },
+      { date: "2026.06.20", cat: "Notice", title: "RemoCollab corporate website renewed." },
       { date: "2026.05.15", cat: "Project", title: "Aligner AI project is now underway." },
       { date: "2026.04.02", cat: "Service", title: "AI automation partnership program launched." },
       { date: "2026.02.10", cat: "Notice", title: "Now accepting partnership inquiries from the US and Canada." },
@@ -108,7 +102,7 @@ const en: Dict = {
   company: {
     kicker: "Company", title: "Company profile",
     rows: [
-      { label: "Company name", value: "A3 Tech Group" },
+      { label: "Company name", value: "RemoCollab" },
       { label: "Established", value: "2024" },
       { label: "Location", value: "Tokyo, Japan" },
       { label: "Representatives", value: "Daniel (Hiro Tanaka), Ryota Masashi" },
@@ -120,7 +114,7 @@ const en: Dict = {
     eyebrow: "Tokyo, Japan",
     l1: "We build software", l2: "and the teams", l3a: "that ", em: "ship", l3b: " it.",
     lede:
-      "A3 Tech Group is a Tokyo-based engineering studio. We deliver production full-stack systems, AI automation, and the kind of hands-on training and partnership that turns an idea into something real.",
+      "RemoCollab is a Tokyo-based engineering studio. We deliver production full-stack systems, AI automation, and the kind of hands-on training and partnership that turns an idea into something real.",
     cta: "Contact us", secondary: "Our skills",
     stats: [
       { dt: "10+ yrs", dd: "combined senior delivery" },
@@ -131,22 +125,6 @@ const en: Dict = {
   trust: {
     label: "Trusted across",
     items: ["Fintech", "SaaS", "E-commerce", "Healthcare", "Manufacturing", "EdTech"],
-  },
-  meaning: {
-    kicker: "The name",
-    title: "The three A's behind A3.",
-    sub: "Architecture, Analytics, Automation. Three disciplines, one team, and the shape of how we work.",
-    items: [
-      { num: "A1", word: "Architecture", body: "Systems designed to last and scale, built on clean foundations your team can grow on." },
-      { num: "A2", word: "Analytics", body: "Turning data into clear decisions, so you can see what's working and what comes next." },
-      { num: "A3", word: "Automation", body: "Letting software and AI handle the repetitive work, so your people do the work that matters." },
-    ],
-    triadsLabel: "Three A's, three ways we show up.",
-    triads: [
-      { theme: "How we build", words: ["Architecture", "Analytics", "Automation"] },
-      { theme: "How we partner", words: ["Align", "Assist", "Ascend"] },
-      { theme: "What you gain", words: ["Adapt", "Accelerate", "Achieve"] },
-    ],
   },
   skills: {
     kicker: "01 · Skills",
@@ -213,11 +191,11 @@ const en: Dict = {
   },
   why: {
     kicker: "02 · Why us",
-    title: "Why collaborate with A3 Tech Group?",
+    title: "Why collaborate with RemoCollab?",
     sub: "Not a vendor you brief and forget. A technology partner that thinks about your business the way you do.",
     blocks: [
       {
-        q: "What makes A3 Tech Group different?",
+        q: "What makes RemoCollab different?",
         a: "We start from your business, not from a stack of tools. Then we bring senior engineering and real AI experience to build something that scales with you.",
         points: ["Business-first thinking", "Long-term partnerships", "AI & automation expertise", "Modern technology stack", "Transparent communication", "Scalability & future growth"],
       },
@@ -299,14 +277,14 @@ const en: Dict = {
   },
   founders: {
     kicker: "06 · Founders",
-    title: "The people behind A3.",
+    title: "The people behind RemoCollab.",
     sub: "Two founders, one standard: do honest work, build real relationships, and leave every project better than we found it.",
     people: [
       {
         initials: "HT",
         name: "Daniel (Hiro Tanaka)",
         role: "Co-Founder & CTO",
-        bio: "Daniel leads engineering and applied AI at A3 Tech Group. He has spent his career at the intersection of solid software and practical AI, architecting systems, mentoring engineers, and keeping delivery honest. He believes good technology is quiet: it works, it lasts, and it gets out of the way.",
+        bio: "Daniel leads engineering and applied AI at RemoCollab. He has spent his career at the intersection of solid software and practical AI, architecting systems, mentoring engineers, and keeping delivery honest. He believes good technology is quiet: it works, it lasts, and it gets out of the way.",
         experience: [
           "10+ years building and scaling production software",
           "Full-stack & AI systems across fintech, SaaS and e-commerce",
@@ -382,7 +360,7 @@ const ja: Dict = {
   company: {
     kicker: "Company", title: "会社概要",
     rows: [
-      { label: "会社名", value: "A3 Tech Group" },
+      { label: "会社名", value: "RemoCollab" },
       { label: "設立", value: "2024年" },
       { label: "所在地", value: "日本・東京" },
       { label: "代表者", value: "Daniel (Hiro Tanaka)、Ryota Masashi" },
@@ -394,7 +372,7 @@ const ja: Dict = {
     eyebrow: "東京, 日本",
     l1: "ソフトウェアと、", l2: "それを動かす", l3a: "", em: "チーム", l3b: "をつくる。",
     lede:
-      "A3 Tech Group は東京を拠点とするエンジニアリングスタジオです。本番品質のフルスタック開発、AI自動化、そしてアイデアを形にする実践的な研修とパートナーシップを提供します。",
+      "RemoCollab は東京を拠点とするエンジニアリングスタジオです。本番品質のフルスタック開発、AI自動化、そしてアイデアを形にする実践的な研修とパートナーシップを提供します。",
     cta: "お問い合わせ", secondary: "私たちのスキル",
     stats: [
       { dt: "10年以上", dd: "シニアによる開発実績" },
@@ -405,22 +383,6 @@ const ja: Dict = {
   trust: {
     label: "対応領域",
     items: ["フィンテック", "SaaS", "EC", "ヘルスケア", "製造業", "EdTech"],
-  },
-  meaning: {
-    kicker: "社名の意味",
-    title: "A3 が表す、3つの A。",
-    sub: "Architecture（設計）、Analytics（分析）、Automation（自動化）。3つの専門領域を、ひとつのチームで。私たちの働き方そのものです。",
-    items: [
-      { num: "A1", word: "Architecture", body: "長く使え、拡張できるシステムを、チームが成長できる綺麗な土台の上に築きます。" },
-      { num: "A2", word: "Analytics", body: "データを明確な意思決定へ。何がうまくいき、次に何をすべきかが見えるように。" },
-      { num: "A3", word: "Automation", body: "繰り返しの作業はソフトウェアとAIに任せ、人は本当に大切な仕事に集中できます。" },
-    ],
-    triadsLabel: "3つの A が示す、私たちの在り方。",
-    triads: [
-      { theme: "つくり方", words: ["Architecture", "Analytics", "Automation"] },
-      { theme: "寄り添い方", words: ["Align", "Assist", "Ascend"] },
-      { theme: "得られる成果", words: ["Adapt", "Accelerate", "Achieve"] },
-    ],
   },
   skills: {
     kicker: "01 · スキル",
@@ -487,11 +449,11 @@ const ja: Dict = {
   },
   why: {
     kicker: "02 · 選ばれる理由",
-    title: "なぜ A3 Tech Group と組むのか。",
+    title: "なぜ RemoCollab と組むのか。",
     sub: "依頼して終わりのベンダーではありません。あなたと同じ目線でビジネスを考える、技術のパートナーです。",
     blocks: [
       {
-        q: "A3 Tech Group の違いは？",
+        q: "RemoCollab の違いは？",
         a: "私たちはツールありきではなく、あなたのビジネスから始めます。そこにシニアのエンジニアリングと実践的なAIの経験を持ち込み、共に成長できるものを築きます。",
         points: ["ビジネス起点の思考", "長期的なパートナーシップ", "AI・自動化の専門性", "モダンな技術スタック", "透明なコミュニケーション", "拡張性と将来の成長"],
       },
@@ -574,14 +536,14 @@ const ja: Dict = {
   },
   founders: {
     kicker: "06 · 創業者",
-    title: "A3 を支える人たち。",
+    title: "RemoCollab を支える人たち。",
     sub: "二人の創業者、ひとつの基準。誠実に働き、本物の関係を築き、すべてのプロジェクトを出会ったときより良くして去る。",
     people: [
       {
         initials: "HT",
         name: "Daniel (Hiro Tanaka)",
         role: "共同創業者 & CTO",
-        bio: "Daniel は A3 Tech Group のエンジニアリングと実用AIを統括します。堅実なソフトウェアと実践的なAIの交点でキャリアを重ね、システムを設計し、エンジニアを育て、誠実な開発を貫いてきました。良い技術は静かであるべきだ。動き、長持ちし、邪魔をしない。それが彼の信条です。",
+        bio: "Daniel は RemoCollab のエンジニアリングと実用AIを統括します。堅実なソフトウェアと実践的なAIの交点でキャリアを重ね、システムを設計し、エンジニアを育て、誠実な開発を貫いてきました。良い技術は静かであるべきだ。動き、長持ちし、邪魔をしない。それが彼の信条です。",
         experience: [
           "本番ソフトウェアの構築・拡張に10年以上",
           "フィンテック・SaaS・ECでのフルスタック/AI開発",
@@ -657,7 +619,7 @@ const zh: Dict = {
   company: {
     kicker: "Company", title: "公司概要",
     rows: [
-      { label: "公司名称", value: "A3 Tech Group" },
+      { label: "公司名称", value: "RemoCollab" },
       { label: "成立", value: "2024年" },
       { label: "所在地", value: "日本·东京" },
       { label: "代表人", value: "Daniel (Hiro Tanaka)、Ryota Masashi" },
@@ -669,7 +631,7 @@ const zh: Dict = {
     eyebrow: "日本 · 东京",
     l1: "我们打造软件，", l2: "也打造", l3a: "", em: "团队", l3b: "去交付它。",
     lede:
-      "A3 Tech Group 是一家位于东京的工程工作室。我们提供生产级的全栈开发、AI 自动化，以及把想法变为现实的实战培训与合作。",
+      "RemoCollab 是一家位于东京的工程工作室。我们提供生产级的全栈开发、AI 自动化，以及把想法变为现实的实战培训与合作。",
     cta: "联系我们", secondary: "我们的技能",
     stats: [
       { dt: "10年+", dd: "资深交付经验" },
@@ -680,22 +642,6 @@ const zh: Dict = {
   trust: {
     label: "服务领域",
     items: ["金融科技", "SaaS", "电商", "医疗健康", "制造业", "教育科技"],
-  },
-  meaning: {
-    kicker: "名字的含义",
-    title: "A3 背后的三个 A。",
-    sub: "Architecture（架构）、Analytics（分析）、Automation（自动化）。三个领域，一支团队，也是我们工作的方式。",
-    items: [
-      { num: "A1", word: "Architecture", body: "构建可长久使用、可扩展的系统，立于团队可成长的干净基础之上。" },
-      { num: "A2", word: "Analytics", body: "把数据变为清晰的决策，让你看清什么有效、下一步该做什么。" },
-      { num: "A3", word: "Automation", body: "把重复性工作交给软件与 AI，让团队专注于真正重要的事。" },
-    ],
-    triadsLabel: "三个 A，三种我们的姿态。",
-    triads: [
-      { theme: "如何构建", words: ["Architecture", "Analytics", "Automation"] },
-      { theme: "如何协作", words: ["Align", "Assist", "Ascend"] },
-      { theme: "你的收获", words: ["Adapt", "Accelerate", "Achieve"] },
-    ],
   },
   skills: {
     kicker: "01 · 技能",
@@ -762,11 +708,11 @@ const zh: Dict = {
   },
   why: {
     kicker: "02 · 为何选择",
-    title: "为何与 A3 Tech Group 合作？",
+    title: "为何与 RemoCollab 合作？",
     sub: "不是交代完就被遗忘的供应商，而是像你一样思考业务的技术伙伴。",
     blocks: [
       {
-        q: "A3 Tech Group 有何不同？",
+        q: "RemoCollab 有何不同？",
         a: "我们从你的业务出发，而非从一堆工具出发。再以资深工程与真实的 AI 经验，构建能与你共同扩展的成果。",
         points: ["业务优先的思考", "长期合作关系", "AI 与自动化专长", "现代技术栈", "透明的沟通", "可扩展与未来成长"],
       },
@@ -849,14 +795,14 @@ const zh: Dict = {
   },
   founders: {
     kicker: "06 · 创始人",
-    title: "A3 背后的人。",
+    title: "RemoCollab 背后的人。",
     sub: "两位创始人，同一标准：做诚实的工作，建立真实的关系，让每个项目都比当初更好。",
     people: [
       {
         initials: "HT",
         name: "Daniel (Hiro Tanaka)",
         role: "联合创始人 & CTO",
-        bio: "Daniel 负责 A3 Tech Group 的工程与应用 AI。他的职业生涯始终处于扎实软件与务实 AI 的交汇处：设计系统、培养工程师、坚守诚实的交付。他相信好的技术是安静的：它能用、耐久，并且不碍事。",
+        bio: "Daniel 负责 RemoCollab 的工程与应用 AI。他的职业生涯始终处于扎实软件与务实 AI 的交汇处：设计系统、培养工程师、坚守诚实的交付。他相信好的技术是安静的：它能用、耐久，并且不碍事。",
         experience: [
           "10 年以上生产级软件的构建与扩展",
           "金融科技、SaaS 与电商的全栈 / AI 开发",

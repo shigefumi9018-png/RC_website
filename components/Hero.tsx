@@ -60,7 +60,7 @@ export function Hero() {
             <pre className="code">
               <code>
                 <span className="c-key">const</span>{" "}
-                <span className="c-var">team</span> = A3.
+                <span className="c-var">team</span> = RemoCollab.
                 <span className="c-fn">assemble</span>({"{"}
                 {"\n"}  <span className="c-prop">stack</span>: [
                 <span className="c-str">&apos;React&apos;</span>,{" "}
