@@ -7,6 +7,9 @@ import { useT } from "./LanguageProvider";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+// Message form is hidden for now — only the booking card is shown. Flip to restore.
+const SHOW_MESSAGE_FORM = false;
+
 export function Contact() {
   const t = useT();
   const c = t.contact;
@@ -51,102 +54,104 @@ export function Contact() {
           <p className="section-sub">{c.sub}</p>
         </header>
 
-        <div className="contact-layout">
+        <div className={SHOW_MESSAGE_FORM ? "contact-layout" : "contact-layout contact-layout--single"}>
           {/* ---- Left: message form ---- */}
-          <div className="contact-card reveal">
-            <h3 className="contact-card-title">{c.formTitle}</h3>
-            <p className="contact-card-sub">{c.formSub}</p>
+          {SHOW_MESSAGE_FORM && (
+            <div className="contact-card reveal">
+              <h3 className="contact-card-title">{c.formTitle}</h3>
+              <p className="contact-card-sub">{c.formSub}</p>
 
-            {status === "success" ? (
-              <div className="form-success" role="status">
-                <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
-                  <circle cx="22" cy="22" r="21" fill="none" stroke="#1a56db" strokeWidth="2" />
-                  <path d="M14 22.5l5.5 5.5L31 16" fill="none" stroke="#1a56db" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <h4>{c.successTitle}</h4>
-                <p>{c.successBody}</p>
-                <button
-                  type="button"
-                  className="btn btn-ghost"
-                  onClick={() => setStatus("idle")}
-                >
-                  {c.sendAnother}
-                </button>
-              </div>
-            ) : (
-              <form className="contact-form" onSubmit={handleSubmit} noValidate>
-                <div className="field-row">
-                  <div className="field">
-                    <label htmlFor="name">{c.name}</label>
-                    <input id="name" name="name" type="text" required autoComplete="name" placeholder={c.namePh} />
-                  </div>
-                  <div className="field">
-                    <label htmlFor="email">{c.email}</label>
-                    <input id="email" name="email" type="email" required autoComplete="email" placeholder={c.emailPh} />
-                  </div>
+              {status === "success" ? (
+                <div className="form-success" role="status">
+                  <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
+                    <circle cx="22" cy="22" r="21" fill="none" stroke="#1a56db" strokeWidth="2" />
+                    <path d="M14 22.5l5.5 5.5L31 16" fill="none" stroke="#1a56db" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <h4>{c.successTitle}</h4>
+                  <p>{c.successBody}</p>
+                  <button
+                    type="button"
+                    className="btn btn-ghost"
+                    onClick={() => setStatus("idle")}
+                  >
+                    {c.sendAnother}
+                  </button>
                 </div>
-
-                <div className="field-row">
-                  <div className="field">
-                    <label htmlFor="companyName">{c.company}</label>
-                    <input id="companyName" name="companyName" type="text" autoComplete="organization" placeholder={c.companyPh} />
+              ) : (
+                <form className="contact-form" onSubmit={handleSubmit} noValidate>
+                  <div className="field-row">
+                    <div className="field">
+                      <label htmlFor="name">{c.name}</label>
+                      <input id="name" name="name" type="text" required autoComplete="name" placeholder={c.namePh} />
+                    </div>
+                    <div className="field">
+                      <label htmlFor="email">{c.email}</label>
+                      <input id="email" name="email" type="email" required autoComplete="email" placeholder={c.emailPh} />
+                    </div>
                   </div>
-                  <div className="field">
-                    <label htmlFor="service">{c.help}</label>
-                    <select id="service" name="service" defaultValue="">
-                      <option value="" disabled>{c.helpPh}</option>
-                      {c.services.map((s) => (
-                        <option key={s} value={s}>{s}</option>
-                      ))}
-                    </select>
+
+                  <div className="field-row">
+                    <div className="field">
+                      <label htmlFor="companyName">{c.company}</label>
+                      <input id="companyName" name="companyName" type="text" autoComplete="organization" placeholder={c.companyPh} />
+                    </div>
+                    <div className="field">
+                      <label htmlFor="service">{c.help}</label>
+                      <select id="service" name="service" defaultValue="">
+                        <option value="" disabled>{c.helpPh}</option>
+                        {c.services.map((s) => (
+                          <option key={s} value={s}>{s}</option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
-                </div>
 
-                <div className="field">
-                  <label htmlFor="message">{c.message}</label>
-                  <textarea id="message" name="message" rows={5} required placeholder={c.messagePh} />
-                </div>
+                  <div className="field">
+                    <label htmlFor="message">{c.message}</label>
+                    <textarea id="message" name="message" rows={5} required placeholder={c.messagePh} />
+                  </div>
 
-                {/* Honeypot (hidden from humans) */}
-                <input
-                  type="text"
-                  name="company_website"
-                  tabIndex={-1}
-                  autoComplete="off"
-                  aria-hidden="true"
-                  className="hp-field"
-                />
+                  {/* Honeypot (hidden from humans) */}
+                  <input
+                    type="text"
+                    name="company_website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="hp-field"
+                  />
 
-                {status === "error" && (
-                  <p className="form-error" role="alert">{error}</p>
-                )}
-
-                <button
-                  type="submit"
-                  className="btn btn-primary form-submit"
-                  disabled={status === "submitting"}
-                >
-                  {status === "submitting" ? c.submitting : c.submit}
-                  {status !== "submitting" && (
-                    <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-                      <path d="M3 8h9M8 4l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+                  {status === "error" && (
+                    <p className="form-error" role="alert">{error}</p>
                   )}
-                </button>
 
-                <p className="form-fineprint">{c.fineprint}</p>
-              </form>
-            )}
+                  <button
+                    type="submit"
+                    className="btn btn-primary form-submit"
+                    disabled={status === "submitting"}
+                  >
+                    {status === "submitting" ? c.submitting : c.submit}
+                    {status !== "submitting" && (
+                      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                        <path d="M3 8h9M8 4l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    )}
+                  </button>
 
-            <ul className="contact-points">
-              {c.points.map((p) => (
-                <li key={p.label}>
-                  <span className="cp-label">{p.label}</span>
-                  <span className="cp-value">{p.value}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+                  <p className="form-fineprint">{c.fineprint}</p>
+                </form>
+              )}
+
+              <ul className="contact-points">
+                {c.points.map((p) => (
+                  <li key={p.label}>
+                    <span className="cp-label">{p.label}</span>
+                    <span className="cp-value">{p.value}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* ---- Right: booking ---- */}
           <div className="contact-card contact-card--booking reveal">

@@ -295,6 +295,7 @@ em { font-style: normal; color: var(--accent); }
   display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.2rem, 3vw, 2rem);
   align-items: start;
 }
+.contact-layout--single { grid-template-columns: 1fr; max-width: 760px; margin-inline: auto; }
 .contact-card {
   background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
   padding: clamp(1.6rem, 3vw, 2.4rem);
