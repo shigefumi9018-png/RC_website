@@ -111,7 +111,7 @@ const en: Dict = {
       { label: "Company name", value: "RemoCollab" },
       { label: "Established", value: "2024" },
       { label: "Location", value: "Tokyo, Japan" },
-      { label: "Representatives", value: "Daniel (Hiro Tanaka), Ryota Masashi" },
+      { label: "Representatives", value: "Try (Shigefumi Kobayashi), Ryota Masashi" },
       { label: "Business", value: "Full-stack development, AI automation, CMS & CRM solutions, AI training" },
       { label: "Languages", value: "English / 日本語 / 中文" },
     ],
@@ -304,10 +304,10 @@ const en: Dict = {
     sub: "Two founders, one standard: do honest work, build real relationships, and leave every project better than we found it.",
     people: [
       {
-        initials: "HT",
-        name: "Daniel (Hiro Tanaka)",
+        initials: "SK",
+        name: "Try (Shigefumi Kobayashi)",
         role: "Co-Founder & CTO",
-        bio: "Daniel leads engineering and applied AI at RemoCollab. He has spent his career at the intersection of solid software and practical AI, architecting systems, mentoring engineers, and keeping delivery honest. He believes good technology is quiet: it works, it lasts, and it gets out of the way.",
+        bio: "Try leads engineering and applied AI at RemoCollab. He has spent his career at the intersection of solid software and practical AI, architecting systems, mentoring engineers, and keeping delivery honest. He believes good technology is quiet: it works, it lasts, and it gets out of the way.",
         experience: [
           "10+ years building and scaling production software",
           "Full-stack & AI systems across fintech, SaaS and e-commerce",
@@ -386,7 +386,7 @@ const ja: Dict = {
       { label: "会社名", value: "RemoCollab" },
       { label: "設立", value: "2024年" },
       { label: "所在地", value: "日本・東京" },
-      { label: "代表者", value: "Daniel (Hiro Tanaka)、Ryota Masashi" },
+      { label: "代表者", value: "Try (Shigefumi Kobayashi)、Ryota Masashi" },
       { label: "事業内容", value: "フルスタック開発、AI自動化、CMS・CRM、AI研修" },
       { label: "対応言語", value: "English / 日本語 / 中文" },
     ],
@@ -579,10 +579,10 @@ const ja: Dict = {
     sub: "二人の創業者、ひとつの基準。誠実に働き、本物の関係を築き、すべてのプロジェクトを出会ったときより良くして去る。",
     people: [
       {
-        initials: "HT",
-        name: "Daniel (Hiro Tanaka)",
+        initials: "SK",
+        name: "Try (Shigefumi Kobayashi)",
         role: "共同創業者 & CTO",
-        bio: "Daniel は RemoCollab のエンジニアリングと実用AIを統括します。堅実なソフトウェアと実践的なAIの交点でキャリアを重ね、システムを設計し、エンジニアを育て、誠実な開発を貫いてきました。良い技術は静かであるべきだ。動き、長持ちし、邪魔をしない。それが彼の信条です。",
+        bio: "Try は RemoCollab のエンジニアリングと実用AIを統括します。堅実なソフトウェアと実践的なAIの交点でキャリアを重ね、システムを設計し、エンジニアを育て、誠実な開発を貫いてきました。良い技術は静かであるべきだ。動き、長持ちし、邪魔をしない。それが彼の信条です。",
         experience: [
           "本番ソフトウェアの構築・拡張に10年以上",
           "フィンテック・SaaS・ECでのフルスタック/AI開発",
@@ -661,7 +661,7 @@ const zh: Dict = {
       { label: "公司名称", value: "RemoCollab" },
       { label: "成立", value: "2024年" },
       { label: "所在地", value: "日本·东京" },
-      { label: "代表人", value: "Daniel (Hiro Tanaka)、Ryota Masashi" },
+      { label: "代表人", value: "Try (Shigefumi Kobayashi)、Ryota Masashi" },
       { label: "业务内容", value: "全栈开发、AI 自动化、CMS·CRM、AI 培训" },
       { label: "语言", value: "English / 日本語 / 中文" },
     ],
@@ -854,10 +854,10 @@ const zh: Dict = {
     sub: "两位创始人，同一标准：做诚实的工作，建立真实的关系，让每个项目都比当初更好。",
     people: [
       {
-        initials: "HT",
-        name: "Daniel (Hiro Tanaka)",
+        initials: "SK",
+        name: "Try (Shigefumi Kobayashi)",
         role: "联合创始人 & CTO",
-        bio: "Daniel 负责 RemoCollab 的工程与应用 AI。他的职业生涯始终处于扎实软件与务实 AI 的交汇处：设计系统、培养工程师、坚守诚实的交付。他相信好的技术是安静的：它能用、耐久，并且不碍事。",
+        bio: "Try 负责 RemoCollab 的工程与应用 AI。他的职业生涯始终处于扎实软件与务实 AI 的交汇处：设计系统、培养工程师、坚守诚实的交付。他相信好的技术是安静的：它能用、耐久，并且不碍事。",
         experience: [
           "10 年以上生产级软件的构建与扩展",
           "金融科技、SaaS 与电商的全栈 / AI 开发",

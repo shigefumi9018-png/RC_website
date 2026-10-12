@@ -18,11 +18,11 @@ export const siteConfig = {
     country: "JP",
   },
   cto: {
-    name: "Daniel (Hiro Tanaka)",
+    name: "Try (Shigefumi Kobayashi)",
     role: "Chief Technology Officer",
   },
   founders: [
-    { name: "Daniel (Hiro Tanaka)", role: "Co-Founder & CTO" },
+    { name: "Try (Shigefumi Kobayashi)", role: "Co-Founder & CTO" },
     { name: "Ryota Masashi", role: "Co-Founder & CEO" },
   ],
   nav: [
