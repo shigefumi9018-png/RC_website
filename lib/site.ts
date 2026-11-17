@@ -11,18 +11,18 @@ export const siteConfig = {
   // Production domain (verified in Resend for email delivery).
   url: "https://a3techgroup.com",
   locale: "en_US",
-  calendly: "https://calendly.com/michael990101zhou/30min",
+  calendly: "https://calendly.com/vien9381nguyen/30min",
   location: {
     city: "Tokyo",
     region: "Tokyo",
     country: "JP",
   },
   cto: {
-    name: "Try (Michael Zhou)",
+    name: "Try (Vien Nguyen)",
     role: "Chief Technology Officer",
   },
   founders: [
-    { name: "Try (Michael Zhou)", role: "Co-Founder & CTO" },
+    { name: "Try (Vien Nguyen)", role: "Co-Founder & CTO" },
     { name: "Ryota Masashi", role: "Co-Founder & CEO" },
   ],
   nav: [
