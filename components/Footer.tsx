@@ -24,7 +24,7 @@ export function Footer() {
         <div className="footer-brand">
           <a className="brand" href="#top">
             <Logo size={30} variant="light" />
-            <span className="brand-text">RemoCollab</span>
+            <span className="brand-text">RemoCollob</span>
           </a>
           <p>{t.footer.blurb}</p>
         </div>

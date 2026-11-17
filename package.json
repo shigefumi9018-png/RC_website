@@ -1,8 +1,8 @@
 {
-  "name": "remocollab-web",
+  "name": "remocollob-web",
   "version": "1.0.0",
   "private": true,
-  "description": "RemoCollab — Tokyo-based software engineering & AI studio",
+  "description": "RemoCollob — Tokyo-based software engineering & AI studio",
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",

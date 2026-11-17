@@ -5,7 +5,7 @@ type LogoProps = {
 };
 
 /**
- * RemoCollab monogram: "RC" with an accent bar beneath.
+ * RemoCollob monogram: "RC" with an accent bar beneath.
  */
 export function Logo({ size = 34, variant = "dark" }: LogoProps) {
   const bg = variant === "dark" ? "#0f1b2e" : "#ffffff";
@@ -17,7 +17,7 @@ export function Logo({ size = 34, variant = "dark" }: LogoProps) {
       height={size}
       viewBox="0 0 32 32"
       role="img"
-      aria-label="RemoCollab"
+      aria-label="RemoCollob"
     >
       <rect width="32" height="32" rx="7" fill={bg} />
       <text

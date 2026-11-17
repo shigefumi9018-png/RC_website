@@ -99,7 +99,7 @@ const en: Dict = {
   news: {
     kicker: "News", title: "Latest updates", more: "View all news",
     items: [
-      { date: "2026.06.20", cat: "Notice", title: "RemoCollab corporate website renewed." },
+      { date: "2026.06.20", cat: "Notice", title: "RemoCollob corporate website renewed." },
       { date: "2026.05.15", cat: "Project", title: "Alignerr AI project is now underway." },
       { date: "2026.04.02", cat: "Service", title: "AI automation partnership program launched." },
       { date: "2026.02.10", cat: "Notice", title: "Now accepting partnership inquiries from the US and Canada." },
@@ -108,7 +108,7 @@ const en: Dict = {
   company: {
     kicker: "Company", title: "Company profile",
     rows: [
-      { label: "Company name", value: "RemoCollab" },
+      { label: "Company name", value: "RemoCollob" },
       { label: "Established", value: "2024" },
       { label: "Location", value: "Tokyo, Japan" },
       { label: "Representatives", value: "Try (Michael Zhou), Ryota Masashi" },
@@ -120,7 +120,7 @@ const en: Dict = {
     eyebrow: "Tokyo, Japan",
     l1: "We build software", l2: "and the teams", l3a: "that ", em: "ship", l3b: " it.",
     lede:
-      "RemoCollab is a Tokyo-based engineering studio. We deliver production full-stack systems, AI automation, and the kind of hands-on training and partnership that turns an idea into something real.",
+      "RemoCollob is a Tokyo-based engineering studio. We deliver production full-stack systems, AI automation, and the kind of hands-on training and partnership that turns an idea into something real.",
     cta: "Contact us", secondary: "Our skills",
     stats: [
       { dt: "10+ yrs", dd: "combined senior delivery" },
@@ -214,11 +214,11 @@ const en: Dict = {
   },
   why: {
     kicker: "02 · Why us",
-    title: "Why collaborate with RemoCollab?",
+    title: "Why collaborate with RemoCollob?",
     sub: "Not a vendor you brief and forget. A technology partner that thinks about your business the way you do.",
     blocks: [
       {
-        q: "What makes RemoCollab different?",
+        q: "What makes RemoCollob different?",
         a: "We start from your business, not from a stack of tools. Then we bring senior engineering and real AI experience to build something that scales with you.",
         points: ["Business-first thinking", "Long-term partnerships", "AI & automation expertise", "Modern technology stack", "Transparent communication", "Scalability & future growth"],
       },
@@ -300,14 +300,14 @@ const en: Dict = {
   },
   founders: {
     kicker: "06 · Founders",
-    title: "The people behind RemoCollab.",
+    title: "The people behind RemoCollob.",
     sub: "Two founders, one standard: do honest work, build real relationships, and leave every project better than we found it.",
     people: [
       {
         initials: "MZ",
         name: "Try (Michael Zhou)",
         role: "Co-Founder & CTO",
-        bio: "Try leads engineering and applied AI at RemoCollab. He has spent his career at the intersection of solid software and practical AI, architecting systems, mentoring engineers, and keeping delivery honest. He believes good technology is quiet: it works, it lasts, and it gets out of the way.",
+        bio: "Try leads engineering and applied AI at RemoCollob. He has spent his career at the intersection of solid software and practical AI, architecting systems, mentoring engineers, and keeping delivery honest. He believes good technology is quiet: it works, it lasts, and it gets out of the way.",
         experience: [
           "10+ years building and scaling production software",
           "Full-stack & AI systems across fintech, SaaS and e-commerce",
@@ -383,7 +383,7 @@ const ja: Dict = {
   company: {
     kicker: "Company", title: "会社概要",
     rows: [
-      { label: "会社名", value: "RemoCollab" },
+      { label: "会社名", value: "RemoCollob" },
       { label: "設立", value: "2024年" },
       { label: "所在地", value: "日本・東京" },
       { label: "代表者", value: "Try (Michael Zhou)、Ryota Masashi" },
@@ -395,7 +395,7 @@ const ja: Dict = {
     eyebrow: "東京, 日本",
     l1: "ソフトウェアと、", l2: "それを動かす", l3a: "", em: "チーム", l3b: "をつくる。",
     lede:
-      "RemoCollab は東京を拠点とするエンジニアリングスタジオです。本番品質のフルスタック開発、AI自動化、そしてアイデアを形にする実践的な研修とパートナーシップを提供します。",
+      "RemoCollob は東京を拠点とするエンジニアリングスタジオです。本番品質のフルスタック開発、AI自動化、そしてアイデアを形にする実践的な研修とパートナーシップを提供します。",
     cta: "お問い合わせ", secondary: "私たちのスキル",
     stats: [
       { dt: "10年以上", dd: "シニアによる開発実績" },
@@ -489,11 +489,11 @@ const ja: Dict = {
   },
   why: {
     kicker: "02 · 選ばれる理由",
-    title: "なぜ RemoCollab と組むのか。",
+    title: "なぜ RemoCollob と組むのか。",
     sub: "依頼して終わりのベンダーではありません。あなたと同じ目線でビジネスを考える、技術のパートナーです。",
     blocks: [
       {
-        q: "RemoCollab の違いは？",
+        q: "RemoCollob の違いは？",
         a: "私たちはツールありきではなく、あなたのビジネスから始めます。そこにシニアのエンジニアリングと実践的なAIの経験を持ち込み、共に成長できるものを築きます。",
         points: ["ビジネス起点の思考", "長期的なパートナーシップ", "AI・自動化の専門性", "モダンな技術スタック", "透明なコミュニケーション", "拡張性と将来の成長"],
       },
@@ -575,14 +575,14 @@ const ja: Dict = {
   },
   founders: {
     kicker: "06 · 創業者",
-    title: "RemoCollab を支える人たち。",
+    title: "RemoCollob を支える人たち。",
     sub: "二人の創業者、ひとつの基準。誠実に働き、本物の関係を築き、すべてのプロジェクトを出会ったときより良くして去る。",
     people: [
       {
         initials: "MZ",
         name: "Try (Michael Zhou)",
         role: "共同創業者 & CTO",
-        bio: "Try は RemoCollab のエンジニアリングと実用AIを統括します。堅実なソフトウェアと実践的なAIの交点でキャリアを重ね、システムを設計し、エンジニアを育て、誠実な開発を貫いてきました。良い技術は静かであるべきだ。動き、長持ちし、邪魔をしない。それが彼の信条です。",
+        bio: "Try は RemoCollob のエンジニアリングと実用AIを統括します。堅実なソフトウェアと実践的なAIの交点でキャリアを重ね、システムを設計し、エンジニアを育て、誠実な開発を貫いてきました。良い技術は静かであるべきだ。動き、長持ちし、邪魔をしない。それが彼の信条です。",
         experience: [
           "本番ソフトウェアの構築・拡張に10年以上",
           "フィンテック・SaaS・ECでのフルスタック/AI開発",
@@ -658,7 +658,7 @@ const zh: Dict = {
   company: {
     kicker: "Company", title: "公司概要",
     rows: [
-      { label: "公司名称", value: "RemoCollab" },
+      { label: "公司名称", value: "RemoCollob" },
       { label: "成立", value: "2024年" },
       { label: "所在地", value: "日本·东京" },
       { label: "代表人", value: "Try (Michael Zhou)、Ryota Masashi" },
@@ -670,7 +670,7 @@ const zh: Dict = {
     eyebrow: "日本 · 东京",
     l1: "我们打造软件，", l2: "也打造", l3a: "", em: "团队", l3b: "去交付它。",
     lede:
-      "RemoCollab 是一家位于东京的工程工作室。我们提供生产级的全栈开发、AI 自动化，以及把想法变为现实的实战培训与合作。",
+      "RemoCollob 是一家位于东京的工程工作室。我们提供生产级的全栈开发、AI 自动化，以及把想法变为现实的实战培训与合作。",
     cta: "联系我们", secondary: "我们的技能",
     stats: [
       { dt: "10年+", dd: "资深交付经验" },
@@ -764,11 +764,11 @@ const zh: Dict = {
   },
   why: {
     kicker: "02 · 为何选择",
-    title: "为何与 RemoCollab 合作？",
+    title: "为何与 RemoCollob 合作？",
     sub: "不是交代完就被遗忘的供应商，而是像你一样思考业务的技术伙伴。",
     blocks: [
       {
-        q: "RemoCollab 有何不同？",
+        q: "RemoCollob 有何不同？",
         a: "我们从你的业务出发，而非从一堆工具出发。再以资深工程与真实的 AI 经验，构建能与你共同扩展的成果。",
         points: ["业务优先的思考", "长期合作关系", "AI 与自动化专长", "现代技术栈", "透明的沟通", "可扩展与未来成长"],
       },
@@ -850,14 +850,14 @@ const zh: Dict = {
   },
   founders: {
     kicker: "06 · 创始人",
-    title: "RemoCollab 背后的人。",
+    title: "RemoCollob 背后的人。",
     sub: "两位创始人，同一标准：做诚实的工作，建立真实的关系，让每个项目都比当初更好。",
     people: [
       {
         initials: "MZ",
         name: "Try (Michael Zhou)",
         role: "联合创始人 & CTO",
-        bio: "Try 负责 RemoCollab 的工程与应用 AI。他的职业生涯始终处于扎实软件与务实 AI 的交汇处：设计系统、培养工程师、坚守诚实的交付。他相信好的技术是安静的：它能用、耐久，并且不碍事。",
+        bio: "Try 负责 RemoCollob 的工程与应用 AI。他的职业生涯始终处于扎实软件与务实 AI 的交汇处：设计系统、培养工程师、坚守诚实的交付。他相信好的技术是安静的：它能用、耐久，并且不碍事。",
         experience: [
           "10 年以上生产级软件的构建与扩展",
           "金融科技、SaaS 与电商的全栈 / AI 开发",
