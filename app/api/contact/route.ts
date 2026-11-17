@@ -144,7 +144,7 @@ export async function POST(request: Request) {
       <div style="white-space:pre-wrap;line-height:1.6;font-size:14px">${escapeHtml(message)}</div>
     </div>
     <p style="font-size:15px;line-height:1.7;margin:0 0 6px">
-      Prefer to talk sooner? You can book a 30-minute call here:
+      Prefer to talk sooner? You can book a 15-minute call here:
     </p>
     <p style="margin:0 0 18px">
       <a href="${siteConfig.calendly}" style="display:inline-block;background:#1a56db;color:#fff;text-decoration:none;padding:10px 18px;border-radius:999px;font-size:14px">Book a call →</a>
