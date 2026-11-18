@@ -33,6 +33,22 @@ export function Collaboration() {
           <p className="section-sub collab-lead">{c.lead}</p>
         </header>
 
+        <div className="collab-equation reveal">
+          {c.equation.map((e, i) => (
+            <div className="collab-eq-group" key={e.label}>
+              {i > 0 && (
+                <span className="collab-eq-op" aria-hidden="true">
+                  {i === c.equation.length - 1 ? "=" : "+"}
+                </span>
+              )}
+              <div className={`collab-eq-card${i === c.equation.length - 1 ? " collab-eq-card--result" : ""}`}>
+                <h3>{e.label}</h3>
+                <p>{e.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
         <div className="collab-grid">
           <div className="collab-visual reveal">
             <Slider slides={slides} ariaLabel={c.title} className="collab-slider" autoMs={5000} />

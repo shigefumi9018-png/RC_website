@@ -430,6 +430,20 @@ em { font-style: normal; color: var(--accent); }
    Collaboration / partnership
    ===================================================================== */
 .collab-lead { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--ink); max-width: 60ch; margin-inline: auto; }
+.collab-equation { display: flex; align-items: stretch; justify-content: center; gap: 1rem; margin: 0 auto clamp(2rem, 4vw, 3rem); max-width: 980px; }
+.collab-eq-group { display: flex; align-items: center; gap: 1rem; flex: 1 1 0; min-width: 0; }
+.collab-eq-op { font-family: var(--serif); font-size: 2rem; line-height: 1; color: var(--accent); flex: none; }
+.collab-eq-card { flex: 1; align-self: stretch; background: var(--white); border-radius: 12px; padding: 1.1rem 1.25rem; text-align: center; }
+.collab-eq-card h3 { font-size: 1.05rem; margin: 0 0 .35rem; color: var(--ink); }
+.collab-eq-card p { margin: 0; font-size: .95rem; color: var(--ink-soft); }
+.collab-eq-card--result { background: var(--ink); }
+.collab-eq-card--result h3 { color: var(--paper); }
+.collab-eq-card--result p { color: var(--paper); opacity: .85; }
+@media (max-width: 760px) {
+  .collab-equation, .collab-eq-group { flex-direction: column; }
+  .collab-eq-group { width: 100%; }
+  .collab-eq-card { width: 100%; }
+}
 .collab-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(2rem, 4vw, 3.5rem); align-items: center; }
 .collab-slide { margin: 0; position: relative; }
 .collab-slide img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); display: block; background: var(--paper); }

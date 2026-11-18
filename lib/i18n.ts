@@ -67,6 +67,7 @@ type Dict = {
   };
   collab: {
     kicker: string; title: string; lead: string;
+    equation: { label: string; text: string }[];
     paras: string[]; noTech: string; revenue: string; meetingNote: string; closing: string; cta: string;
     slides: { alt: string; caption: string }[];
   };
@@ -269,6 +270,11 @@ const en: Dict = {
     kicker: "05 · Partnership",
     title: "Built together, built to last.",
     lead: "We're genuinely excited to bring our expertise to the table and help turn your vision into something real.",
+    equation: [
+      { label: "Your strengths", text: "Your idea, your network, and the market you know best." },
+      { label: "Our strengths", text: "Engineering, AI, and the technical delivery to build it." },
+      { label: "A result that lasts", text: "Something neither of us could build as well alone." },
+    ],
     paras: [
       "Every result we're proud of started the same way, with people who trusted one another and shared a clear goal. Projects always have their hard moments; what carries them through is steady communication, professionalism, and a real commitment to each other's success.",
       "To us, collaboration is more than working side by side. It's combining strengths, trading honest ideas, and opening doors none of us could reach alone. Good things get built through consistent effort and a genuine willingness to support the people around you.",
@@ -544,6 +550,11 @@ const ja: Dict = {
     kicker: "05 · パートナーシップ",
     title: "共に築き、長く続く。",
     lead: "私たちの専門性を活かし、あなたのビジョンを形にするお手伝いができることを、心から楽しみにしています。",
+    equation: [
+      { label: "あなたの強み", text: "あなたのアイデア、人脈、そして一番よく知る市場。" },
+      { label: "私たちの強み", text: "それを形にするエンジニアリング、AI、技術的な実装。" },
+      { label: "長く続く成果", text: "どちらか一方だけでは築けない、確かな結果。" },
+    ],
     paras: [
       "私たちが誇れる成果は、いつも同じ場所から始まりました。互いを信頼し、明確な目標を分かち合う人たちです。プロジェクトには必ず難しい局面があります。それを乗り越えるのは、絶え間ない対話、プロ意識、そして互いの成功への真の献身です。",
       "私たちにとって協働とは、ただ隣で働くこと以上のものです。強みを掛け合わせ、率直に意見を交わし、一人では届かない扉を開くこと。良いものは、地道な努力と、周囲を支えようとする誠実な姿勢から生まれます。",
@@ -819,6 +830,11 @@ const zh: Dict = {
     kicker: "05 · 合作伙伴",
     title: "共同打造，长久同行。",
     lead: "我们由衷期待发挥所长，帮助你把愿景变为现实。",
+    equation: [
+      { label: "你的优势", text: "你的想法、人脉，以及你最了解的市场。" },
+      { label: "我们的优势", text: "将其变为现实的工程能力、AI 与技术交付。" },
+      { label: "长久的成果", text: "任何一方都无法独自做得同样好的结果。" },
+    ],
     paras: [
       "我们引以为傲的每一个成果，都源自同一处起点：彼此信任、目标一致的人。项目总会有艰难的时刻，真正支撑它走下去的，是持续的沟通、专业的态度，以及对彼此成功的真诚投入。",
       "对我们而言，合作不止于并肩工作。它意味着优势互补、坦诚交流，并打开任何一方独自无法触及的大门。美好的成果，源自持续的努力与支持身边人的真诚意愿。",
